@@ -7,7 +7,7 @@
   position: relative;
   z-index: 1;
   margin: 0 auto;
-  transition: all .5s ease;
+  transition: all 1s ease;
 
   &__wrapper {
     margin: 0 auto;
@@ -54,6 +54,7 @@
   &__cards {
     width: 100%;
     margin: 0 auto;
+    transition: all 1s ease;
 
     // main
     display: flex;
