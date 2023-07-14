@@ -183,7 +183,6 @@ $prefix: ".tickets";
 
                 tr:last-child td {
                     @media (max-width: vars.$bp-lg) {
-                        height: 15vh;
                         padding: .5rem;
                     }
                 }
