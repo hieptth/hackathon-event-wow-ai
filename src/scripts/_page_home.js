@@ -94,9 +94,6 @@ export function sponsorsSlide() {
         width: "100%",
         height: "124%",
         breakpoints: {
-          480: {
-            perPage: 1,
-          },
           768: {
             perPage: 2,
           },

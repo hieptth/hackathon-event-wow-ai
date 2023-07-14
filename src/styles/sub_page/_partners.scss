@@ -8,7 +8,7 @@ $prefix-1: ".outlets";
 #{$prefix} {
     max-width: vars.$bp-xxl;
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 1rem 0 3rem;
 
     display: flex;
     flex-direction: column;
@@ -91,7 +91,7 @@ $prefix-1: ".outlets";
 #{$prefix-1} {
     max-width: vars.$bp-xxl;
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 1rem 0 3rem;
 
     display: flex;
     flex-direction: column;

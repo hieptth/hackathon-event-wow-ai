@@ -8,10 +8,10 @@
 
     &__split {
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-flow: row nowrap;
+        justify-content: space-around;
         align-items: center;
-        padding: 1vw 2vw 1vw 7vw;
+        padding: 1rem 1rem 3rem 3rem;
 
         @media (max-width: vars.$bp-md) {
             display: flex;
@@ -19,17 +19,25 @@
             flex-wrap: wrap;
             justify-content: center;
             align-items: center;
+            padding: .5rem;
         }
 
-        &__right {
+        &__left {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
-            margin-top: 5vh;
+            flex: 1 0;
+            margin: 3rem 2rem 0 0;
+            width: 40%;
 
-            margin-right: 2rem;
-            width: 45vw;
+            @media (min-width: vars.$bp-xl) {
+                padding-left: 10vw;
+            }
+
+            @media (min-width: vars.$bp-wide) {
+                padding-left: 20vw;
+            }
 
             @media (max-width: vars.$bp-md) {
                 display: flex;
@@ -37,7 +45,8 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
-                width: 90vw;
+                max-width: vars.$bp-xxl;
+                width: 100%;
                 margin-right: 0;
             }
 
@@ -57,6 +66,7 @@
                 img {
                     width: 38px;
                     height: 38px;
+                    margin: .5rem 0;
                     margin-right: .8rem;
                 }
             }
@@ -74,13 +84,13 @@
             }
         }
 
-        &__left {
-            width: 45vw;
-            margin-top: 8vh;
-            padding-left: 10vw;
+        &__right {
+            width: 40%;
+            margin-top: 3rem;
 
             display: flex;
-            flex-direction: column;
+            flex-flow: column wrap;
+            align-items: flex-start;
             justify-content: flex-end;
 
             @media (max-width: vars.$bp-md) {
@@ -98,12 +108,14 @@
 
     &__text {
         font-size: 1rem;
-        text-align: center;
+        text-align: start;
         line-height: 1.5rem;
+        word-wrap: break-word;
+        white-space: normal;
         margin: .3rem 0;
 
-        display: flex;
-        flex-direction: row;
+        display: inline-flex;
+        flex-flow: row nowrap;
         justify-content: flex-start;
 
         img {

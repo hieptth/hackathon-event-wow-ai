@@ -45,21 +45,21 @@ $prefix: ".judges";
 
                 .title {
                     margin: .5rem 0;
-                    font-size: 1.4vw;
+                    font-size: 1.3rem;
                 }
 
                 .subTitle {
-                    font-size: .9vw;
+                    font-size: .9rem;
                 }
 
                 @media (max-width: vars.$bp-lg) {
 
                     .title {
-                        font-size: 2.5vw;
+                        font-size: 1.2rem;
                     }
 
                     .subTitle {
-                        font-size: 1.6vw;
+                        font-size: .8rem;
                     }
                 }
 
@@ -67,23 +67,23 @@ $prefix: ".judges";
 
                     .title {
                         margin: .2rem 0;
-                        font-size: 3.5vw;
+                        font-size: 1.3rem;
                     }
 
                     .subTitle {
-                        font-size: 1.8vw;
+                        font-size: .8rem;
                     }
                 }
 
-                @media (max-width: vars.$bp-sm) {
+                @media (max-width: vars.$bp-xs) {
 
                     .title {
-                        margin: .5rem 0;
-                        font-size: 5vw;
+                        margin: 1rem 0;
+                        font-size: 2rem;
                     }
 
                     .subTitle {
-                        font-size: 2.5vw;
+                        font-size: 1rem;
                     }
                 }
             }
