@@ -1,1 +1,1 @@
-# hackathon-event-wow-ai
+# Hackathon Event

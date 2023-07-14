@@ -245,4 +245,8 @@
 
 .navbar-scrolled {
   background-color: vars.$color-black;
+
+  @media (min-width: vars.$bp-lg) {
+    background-color: vars.$color-dark;
+  }
 }
