@@ -80,6 +80,10 @@ $prefix: ".attend";
         align-items: center;
 
         @media (max-width: vars.$bp-xxl) {
+            margin-top: 5rem;
+        }
+
+        @media (max-width: vars.$bp-xl) {
             margin-top: 2rem;
         }
 
