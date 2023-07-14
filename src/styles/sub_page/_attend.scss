@@ -74,19 +74,23 @@ $prefix: ".attend";
 
     &__list {
         margin: 0 1rem;
-        max-width: calc(calc(vars.$bp-xxl - 13rem) - 320px);
+        // max-width: calc(calc(vars.$bp-xxl - 13rem) - 320px);
         width: 100%;
         display: flex;
         align-items: center;
 
         @media (max-width: vars.$bp-xxl) {
-            margin-top: 5rem;
+            margin-top: 2rem;
         }
 
         &__wrapper {
             position: absolute;
             overflow-x: hidden;
             left: 0;
+
+            @media (max-width: vars.$bp-xl) {
+                position: relative;
+            }
 
             .splide__list {
                 align-items: center;
