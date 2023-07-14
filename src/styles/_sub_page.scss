@@ -19,6 +19,10 @@
   padding-bottom: 0;
   margin: 0 auto;
 
+  @media (max-width: 428px) {
+    padding: 20px 8px;
+  }
+
   .section {
 
     &__stars {

@@ -99,7 +99,7 @@
         background-image: url(/assets/imgs/card-grid.png);
         background-position: center center;
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: contain;
 
         .card-grid {
           background: radial-gradient(245.19% 108.52% at 18.07% 19.48%, #1D1E30 0%, rgba(29, 30, 48, 0.00) 100%);
@@ -132,8 +132,8 @@
             }
 
             img {
-              width: 36px;
-              height: 36px;
+              width: 30px;
+              height: 30px;
               animation: sparkle 2s infinite;
             }
           }
@@ -190,6 +190,10 @@
                 font-size: 1.3rem;
                 margin: .8rem 0;
                 line-height: 1.2rem;
+
+                @media (max-width: vars.$bp-md) {
+                  line-height: 1.5rem;
+                }
               }
 
               p {

@@ -36,6 +36,14 @@ $prefix: ".tickets";
         padding: 0 .5rem;
         margin: 0 auto;
 
+        @media (max-width: 510px) {
+            padding: 0;
+        }
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
         &__title {
 
             h1 {
@@ -47,38 +55,40 @@ $prefix: ".tickets";
                 text-align: center;
             }
 
-            @media (max-width: 730px) {
+            // @media (max-width: 730px) {
 
-                &::after {
-                    content: "Drag / Scroll";
-                    font-size: 1.5rem;
-                    position: absolute;
-                    top: 3%;
-                    left: 50%;
-                    transform: translate(-50%, 100%);
-                }
-            }
+            //     &::after {
+            //         content: "Drag / Scroll";
+            //         font-size: 1.5rem;
+            //         position: absolute;
+            //         top: 3%;
+            //         left: 50%;
+            //         transform: translate(-50%, 100%);
+            //     }
+            // }
         }
 
         &__content {
             margin: 2rem auto;
-            max-width: 100vw;
-            overflow: auto;
-
-
+            max-width: 100%;
 
             table {
+                table-layout: fixed;
                 border-collapse: collapse;
                 border: none;
 
                 // test
                 border-radius: 15px;
-                max-width: inherit;
-                height: 100%;
+                height: auto;
+                max-width: vars.$bp-xxl;
                 width: 100%;
                 background-color: vars.$color-white;
                 padding: 0 1rem;
                 // background-color: transparent;
+
+                @media (max-width: 510px) {
+                    padding: 0;
+                }
 
                 color: vars.$color-light-purple;
                 text-align: center;
@@ -91,15 +101,40 @@ $prefix: ".tickets";
                     height: auto;
                     font-size: 15px;
                     font-weight: 900;
-
-                    @media (max-width: vars.$bp-lg) {
-                        font-size: 12px;
-                    }
+                    word-wrap: break-word;
+                    white-space: normal;
                 }
 
                 th,
                 td {
                     border: 1px solid vars.$color-w2;
+                }
+
+                th,
+                td {
+                    width: calc(90vw / 6);
+
+                    @media (min-width: vars.$bp-xl) {
+                        width: 100%;
+                    }
+
+                    @media (max-width: vars.$bp-lg) {
+                        font-size: 12px;
+                    }
+
+                    @media (max-width: 510px) {
+                        width: calc(90vw / 6);
+                        font-size: 10px;
+                        line-height: .8rem;
+                    }
+
+                    @media (max-width: 428px) {
+                        font-size: 8px;
+                    }
+
+                    @media (max-width: 320px) {
+                        font-size: 6px;
+                    }
                 }
 
                 tr:nth-child(2) td:not(td:first-child) {
@@ -117,24 +152,31 @@ $prefix: ".tickets";
                 }
 
                 td {
+
                     a {
-                        padding: .5rem;
+                        padding: .7rem .5rem;
                         border-radius: 30px !important;
-                        width: 80%;
-                        height: 80%;
                         font-size: 14px;
                         font-weight: 400 !important;
+                        max-width: 100%;
+                        max-height: 80%;
+                        word-wrap: break-word;
 
-                        @media (max-width: vars.$bp-lg) {
-                            width: 100%;
-                            height: fit-content;
-                            white-space: nowrap;
-                            transform: rotate(90deg);
+                        @media (max-width: 720px) {
+                            font-size: 12px;
                         }
 
-                        @media (max-width: vars.$bp-md) {
-                            font-size: 12px;
-                            width: 100%;
+                        @media (max-width: 510px) {
+                            font-size: 10px;
+                            line-height: .5rem;
+                        }
+
+                        @media (max-width: 428px) {
+                            font-size: 8px;
+                        }
+
+                        @media (max-width: 320px) {
+                            font-size: 6px;
                         }
                     }
                 }
@@ -153,20 +195,15 @@ $prefix: ".tickets";
 
                 td:first-child {
                     padding-left: 1rem;
-                    width: 15vw;
                     border-right: none;
 
                     @media (min-width: vars.$bp-3xl) {
-                        width: 370px;
+                        min-width: 370px;
                     }
-                }
 
-                td:nth-child(n):not(td:first-child, td:nth-child(5)) {
-                    width: 10vw;
-                }
-
-                td:nth-child(5) {
-                    width: 12vw;
+                    @media (max-width: 480px) {
+                        padding-left: 0.3rem;
+                    }
                 }
 
                 // remove outer border
