@@ -83,7 +83,7 @@ export function sponsorsSlide() {
   if (sponsorsCarousel) {
     requestAnimationFrame(function () {
       new Splide(sponsorsCarousel, {
-        autoplay: true,
+        autoplay: false,
         arrows: false,
         pagination: true,
         drag: true,
