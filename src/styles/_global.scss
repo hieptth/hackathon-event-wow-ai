@@ -1,0 +1,109 @@
+@use "mixins" as mixins;
+@use "variables" as vars;
+
+@import "@splidejs/splide/dist/css/splide.min";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: 'Quicksand', sans-serif;
+  font-size: vars.$fs-default;
+  font-weight: 600;
+  line-height: vars.$lh-default;
+  direction: ltr;
+  list-style: none;
+  text-decoration: none;
+
+  /* For debugging */
+  // outline: 1px solid vars.$color-bright-pink;
+  // background-color: rgba(195, 255, 0, 0.1);
+}
+
+html,
+body {
+  box-sizing: border-box;
+  color: vars.$color-white;
+  position: relative;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100dvh;
+  margin: 0 auto;
+}
+
+a {
+  color: vars.$color-white;
+  text-decoration: none;
+  @include mixins.transition("color");
+
+  &:hover,
+  &:focus {
+    color: vars.$color-bright-pink;
+  }
+}
+
+.anchor {
+  transform: translateY(-64px);
+}
+
+.go-top {
+  align-items: center;
+  background-color: vars.$color-bright-pink;
+  border: solid 2px vars.$color-white;
+  border-radius: 100%;
+  bottom: 16px;
+  color: vars.$color-white;
+  display: flex;
+  justify-content: center;
+  height: 36px;
+  opacity: .5;
+  position: fixed;
+  right: 16px;
+  width: 36px;
+  z-index: 9999;
+  @include mixins.transition("opacity");
+
+  &:hover,
+  &:focus {
+    color: vars.$color-white;
+    opacity: 1;
+  }
+
+  svg {
+    height: 66%;
+    width: 66%;
+  }
+}
+
+.entrance-animation {
+  opacity: 0;
+  transform: scale(.8) translateY(-64px);
+  @include mixins.transition("opacity, transform");
+
+  @for $i from 1 to 32 {
+    &--delay-#{$i} {
+      transition-delay: $i * 100ms;
+    }
+  }
+
+  &--show {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: .2;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: .2;
+  }
+}

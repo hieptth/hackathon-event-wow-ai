@@ -1,0 +1,92 @@
+@use "../variables" as vars;
+
+$prefix: ".judges";
+
+.active {
+    display: block;
+}
+
+#{$prefix} {
+    max-width: vars.$bp-xxl;
+    margin: 1rem auto;
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex: 1;
+        white-space: nowrap;
+
+        &__item {
+            padding: 2rem 5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 20vw;
+
+            img {
+                display: flex;
+                flex: 1;
+                width: 165px;
+                height: 165px;
+            }
+
+            @media (max-width: vars.$bp-lg) {
+                margin: .5rem;
+            }
+
+            .desc {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .title {
+                    margin: .5rem 0;
+                    font-size: 1.4vw;
+                }
+
+                .subTitle {
+                    font-size: .9vw;
+                }
+
+                @media (max-width: vars.$bp-lg) {
+
+                    .title {
+                        font-size: 2.5vw;
+                    }
+
+                    .subTitle {
+                        font-size: 1.6vw;
+                    }
+                }
+
+                @media (max-width: 650px) {
+
+                    .title {
+                        margin: .2rem 0;
+                        font-size: 3.5vw;
+                    }
+
+                    .subTitle {
+                        font-size: 1.8vw;
+                    }
+                }
+
+                @media (max-width: vars.$bp-sm) {
+
+                    .title {
+                        margin: .5rem 0;
+                        font-size: 5vw;
+                    }
+
+                    .subTitle {
+                        font-size: 2.5vw;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,70 @@
+$animation-duration: 250ms;
+$animation-timing-function: ease;
+
+// screen-size
+$bp-ultra: 2560px;
+$bp-wide: 1920px;
+$bp-3xl: 1536px;
+$bp-xxl: 1440px;
+$bp-xl: 1200px;
+$bp-lg: 1024px;
+$bp-md: 768px;
+$bp-sm: 480px;
+$bp-xs: 320px;
+
+$bps: (
+        3xl: $bp-3xl,
+        xxl: $bp-xxl,
+        xl: $bp-xl,
+        lg: $bp-lg,
+        md: $bp-md,
+        sm: $bp-sm,
+        xs: $bp-xs,
+);
+
+// Colors
+$color-white: white;
+$color-w2: #F5F7FA;
+$color-light-white: rgba(239, 237, 253, 0.6);
+$color-gray: #A3A3A3;
+$color-light-gray: #383838;
+$color-slate-gray: #6F6C99;
+$color-light-pink: #D3C6FF;
+$color-pink: #ED05C7;
+$color-purple: #333399;
+$color-bright-pink: #FF71E8;
+$color-light-purple: #3838FF;
+$color-blue-pink: #4A3DFD;
+$color-heavy-pink: #E384FF;
+$color-red-pink: #CB4974;
+$color-red-purple: #D30D60;
+$color-bright-blue: #495AE9;
+$color-dark: #0D0E11;
+$color-black: #1E2031;
+$color-light-dark: #181818;
+
+// Gradient
+$gradient-hong-line: linear-gradient(90deg, $color-pink 0%, $color-purple 100%);
+$gradient-th-line1: linear-gradient(225deg, $color-light-purple 20%, $color-bright-pink 90%);
+$gradient-th-line1-reverse: linear-gradient(225deg, $color-bright-pink 10%, $color-light-purple 100%);
+$gradient-cta: linear-gradient(90deg, #FF71E8 0%, #5757FF 100%);
+$gradient-tim-2: linear-gradient(180deg, #FFFFFF 0%, #6A5BFD 100%);
+$gradient-grad: radial-gradient(110.85% 293.15% at 0% 4.01%, #DBB1FF 0%, #716DFFA1 100%);
+$gradient-grad-reverse: radial-gradient(110.85% 293.15% at 0% 4.01%, #716DFFA1 100%, #DBB1FF 0%);
+$gradient-line-n: linear-gradient(92.69deg, #F0F4F3 -2.5%, #CB4974 31.72%, #0C3287 97.55%);
+
+
+// Font
+$fs-default: 16px;
+$fs-p-s: 14px;
+$fs-h5: 22px;
+$fs-h4: 26px;
+$fs-h3: 30px;
+$fs-h2: 34px;
+$fs-h1-s: 42px;
+
+$lh-default: 18px;
+
+// Paths
+$path-elipse-tl: "M133.904 21.1388C113.608 7.18074 88.9405 9.30271 84.7872 9.72015C74.9568 10.7029 59.3448 12.2683 50.063 23.6347C43.2365 32.0704 45.5701 38.7494 38.2038 49.4723C30.08 61.3084 21.5556 60.3692 15.7654 67.2395C2.13863 83.3891 12.2825 128.333 40.7463 149.283C72.6146 172.764 128.158 166.676 153.382 128.142C177.362 91.5204 163.535 41.5323 133.904 21.1388Z";
+$path-elipse-br: "M44.6625 152.391C63.8077 166.636 87.7328 165.482 91.7709 165.229C101.314 164.631 116.48 163.688 125.871 152.98C132.784 145.104 130.769 138.558 138.281 128.441C146.576 117.287 154.787 118.5 160.646 112.064C174.421 96.9003 166.202 53.0437 139.461 31.7304C109.491 7.83927 55.5207 11.7313 29.7157 48.1071C5.18361 82.6802 16.7415 131.608 44.6625 152.391Z";

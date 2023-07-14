@@ -1,0 +1,135 @@
+@use "../variables" as vars;
+
+$prefix: ".attend";
+
+#{$prefix} {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 4rem;
+    padding-left: 6rem;
+    margin: 0 auto;
+    max-width: vars.$bp-xxl;
+    width: 100%;
+
+    @media (max-width: vars.$bp-xl) {
+        padding-bottom: 5rem;
+    }
+
+    @media (max-width: vars.$bp-md) {
+        padding: 1rem;
+        padding-bottom: 5rem;
+    }
+
+    &__title {
+        display: flex;
+        flex-direction: column;
+        padding: 0 .5rem;
+
+        background-image: url(/assets/imgs/attend-title-bg.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        h1 {
+            font-size: 2.7rem;
+            margin: 1.5rem 0;
+
+            @media (max-width: vars.$bp-md) {
+                line-height: 2.5rem;
+            }
+        }
+
+        &__btnWrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: .5rem 0;
+            max-height: 70px;
+
+
+            .navBtn {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                align-items: center;
+                justify-content: space-around;
+                max-width: 120px;
+                width: 100%;
+
+                button {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+
+                    svg:hover path {
+                        stroke: white;
+                    }
+                }
+            }
+        }
+    }
+
+    &__list {
+        margin: 0 1rem;
+        max-width: calc(calc(vars.$bp-xxl - 13rem) - 320px);
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: vars.$bp-xxl) {
+            margin-top: 5rem;
+        }
+
+        &__wrapper {
+            position: absolute;
+            overflow-x: hidden;
+            left: 0;
+
+            .splide__list {
+                align-items: center;
+            }
+
+            .splide__slide {
+                display: flex;
+                flex-direction: column;
+
+                background-color: vars.$color-black;
+                border-radius: 15px;
+                justify-content: center;
+                min-height: 125px;
+                max-width: 235px;
+                padding: 1rem;
+
+                span.wrapper {
+                    display: flex;
+                    flex-direction: row;
+
+                    div {
+                        margin-right: .5rem;
+                    }
+                }
+
+                p {
+                    font-size: 12px;
+                    text-align: left;
+                }
+            }
+
+            .splide__slide:hover {
+                background-image: url(/assets/imgs/attend-hover-bg.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+
+                border: .3px solid white;
+
+                span.wrapper div {
+                    margin: auto 0;
+                    margin-right: .5rem;
+                }
+            }
+        }
+    }
+}

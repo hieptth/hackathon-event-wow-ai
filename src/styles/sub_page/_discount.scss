@@ -1,0 +1,124 @@
+@use "../variables" as vars;
+
+$prefix: ".discount";
+
+#{$prefix} {
+    max-width: vars.$bp-xxl;
+    margin: 0 auto;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        flex: 1;
+        justify-content: center;
+
+        &__imgContainer img {
+            border-radius: 25px;
+            border: 2px solid vars.$color-w2;
+            width: 280px;
+            height: 280px;
+        }
+
+        &__content {
+            margin-left: 3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            width: 38vw;
+
+            @media (max-width: 600px) {
+                padding: 0;
+                margin: 0 auto;
+                width: 60vw;
+                text-align: center;
+            }
+
+            .title {
+                margin: 1rem 0;
+                text-transform: uppercase;
+                font-size: 2rem;
+                color: vars.$color-light-pink;
+                font-weight: 800;
+
+                @media (max-width: vars.$bp-lg) {
+                    line-height: 2rem;
+                }
+            }
+
+            .subTitle {
+                margin: 1rem 0;
+                font-size: 1.4rem;
+
+                @media (max-width: vars.$bp-lg) {
+                    line-height: 2rem;
+                }
+            }
+
+            .form {
+                display: flex;
+                flex-direction: row;
+                margin-top: 1.5rem;
+
+                @media (max-width: 600px) {
+                    margin: 0 auto;
+                }
+
+                input {
+                    width: 25vw;
+                    height: 40px;
+                    margin-right: 1rem;
+
+                    border-radius: 30px;
+                    text-align: center;
+                    border: none;
+                    background-color: vars.$color-black;
+                    color: vars.$color-white;
+
+                    @media (max-width: 600px) {
+                        width: 40vw;
+                        font-size: 2vw;
+                    }
+                }
+
+                input::placeholder {
+                    font-size: 12px;
+                    color: vars.$color-white !important;
+
+                    @media (max-width: 600px) {
+                        font-size: 2vw;
+                    }
+                }
+
+                button {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                    padding: 0 .5rem 0 2rem;
+                    width: 10vw;
+                    height: 6vh;
+
+                    @media (max-width: vars.$bp-lg) {
+                        padding: 0;
+                        width: 90px;
+                        height: 40px;
+                    }
+
+                    @media (max-width: 600px) {
+                        justify-content: space-evenly;
+                    }
+
+                    span {
+                        font-size: 14px;
+
+                        @media (max-width: 600px) {
+                            font-size: 2vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

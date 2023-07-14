@@ -1,0 +1,89 @@
+@use "../mixins" as mixins;
+@use "../variables" as vars;
+
+.c-btn {
+  align-items: center;
+  appearance: none;
+  background-color: white;
+  border: none;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #5E60F0;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: vars.$fs-h5;
+  justify-content: center;
+  outline: none;
+  padding: 20px 44px;
+  text-align: center;
+  @include mixins.transition("background, color");
+
+  @media (max-width: 720px) {
+    font-size: vars.$fs-p-s;
+    padding: 12px 16px;
+
+    &>svg {
+      height: 1rem;
+      width: 1rem;
+    }
+  }
+
+  &:hover {
+    @extend .c-btn--hover-gradient;
+  }
+
+  &--hover-gradient:hover,
+  &--gradient {
+    background-color: transparent;
+    background-image: vars.$gradient-th-line1;
+    color: white;
+  }
+
+  &--hover-gradient-reverse:hover,
+  &--gradient-reverse {
+    background-color: transparent;
+    background-image: vars.$gradient-th-line1-reverse;
+    color: white;
+  }
+
+  &--light-purple {
+    background-color: vars.$color-light-purple;
+    color: white;
+  }
+
+  &--black {
+    background-color: vars.$color-black;
+    color: vars.$color-white !important;
+  }
+
+  &--slate-gray {
+    background-color: vars.$color-slate-gray;
+    color: vars.$color-white !important;
+  }
+
+  &--tiny {
+    font-weight: 500;
+    font-size: vars.$fs-default * 0.85;
+    padding: 10px 20px;
+  }
+
+  &--small {
+    font-weight: 500;
+    font-size: vars.$fs-default;
+    padding: 12px 24px;
+  }
+
+  &--medium {
+    font-weight: 500;
+    font-size: vars.$fs-default * 1.25;
+    padding: 16px 32px;
+  }
+
+  &--glow {
+    box-shadow: -4px 4px 10px 1px rgba(173, 132, 255, 0.3);
+  }
+
+  &--text-small {
+    font-size: vars.$fs-default;
+  }
+}

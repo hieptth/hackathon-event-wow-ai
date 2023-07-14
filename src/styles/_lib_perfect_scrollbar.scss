@@ -1,0 +1,61 @@
+.ps {
+  .ps--active-x > &__rail-x,
+  .ps--active-y > &__rail-y {
+    background-color: #6F6C99;
+    border-radius: 21px;
+  }
+
+  .ps--active-x > &__rail-x {
+    height: 9px;
+  }
+
+  .ps--active-y > &__rail-y {
+    width: 9px;
+  }
+
+  &--active-x &__rail-x#{&}--clicking,
+  &--active-x &__rail-x:hover,
+  &--active-y &__rail-y#{&}--clicking,
+  &--active-y &__rail-y:hover {
+    background-color: #6F6C99;
+    opacity: 1;
+  }
+
+  &__thumb-x {
+    background: linear-gradient(90deg, #564EE1 0%, #FF8AF4 59.37%, #FFFFFF 100%);
+    height: 9px;
+    opacity: 1;
+    right: 0;
+  }
+
+  &__thumb-y {
+    background: linear-gradient(180deg, #564EE1 0%, #FF8AF4 59.37%, #FFFFFF 100%);
+    opacity: 1;
+    right: 0;
+    width: 9px;
+  }
+
+  &--active-x &__rail-x &__thumb-x,
+  &--active-x &__rail-x:hover &__thumb-x {
+    background: linear-gradient(90deg, #564EE1 0%, #FF8AF4 59.37%, #FFFFFF 100%);
+    border-radius: 21px;
+    bottom: 0;
+    height: 9px;
+  }
+
+  &--active-y &__rail-y &__thumb-y,
+  &--active-y &__rail-y:hover &__thumb-y {
+    background: linear-gradient(180deg, #564EE1 0%, #FF8AF4 59.37%, #FFFFFF 100%);
+    border-radius: 21px;
+    width: 9px;
+  }
+
+  &__rail-x#{&}--clicking &__thumb-x {
+    bottom: 0;
+    height: 9px;
+  }
+
+  &__rail-y#{&}--clicking &__thumb-y {
+    width: 9px;
+  }
+}

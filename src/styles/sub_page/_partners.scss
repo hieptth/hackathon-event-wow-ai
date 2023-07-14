@@ -1,0 +1,166 @@
+@use "../variables" as vars;
+@use "../mixins" as mixins;
+
+$prefix: ".partners";
+
+$prefix-1: ".outlets";
+
+#{$prefix} {
+    max-width: vars.$bp-xxl;
+    margin: 0 auto;
+    padding: 1rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__wrapper {
+
+        &__title {
+            text-transform: capitalize;
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-align: center;
+            line-height: 2rem;
+            height: 5vw;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            background-image: url(/assets/imgs/attend-title-bg.png);
+            background-position: left 40% center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &__list {
+
+            &__wrapper {
+                padding: 2rem;
+
+                .splide__list {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    max-width: 80vw;
+
+                    .splide__slide {
+                        display: inline-flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+                        height: 80px;
+
+                        img {
+                            padding: .5rem;
+                            max-width: 100%;
+                            max-height: 80px;
+                        }
+                    }
+                }
+            }
+
+            .splide__pagination {
+                bottom: auto;
+                margin-top: 16px;
+                top: 100%;
+            }
+
+            .splide__pagination__page {
+                background: vars.$color-white;
+                border-radius: 5px;
+                height: 7px;
+                margin: 0 4px;
+                opacity: 1;
+                width: 20px;
+                @include mixins.transition("width");
+
+                &.is-active {
+                    background: vars.$color-bright-pink;
+                    transform: none;
+                    width: 40px;
+                }
+            }
+        }
+    }
+}
+
+#{$prefix-1} {
+    max-width: vars.$bp-xxl;
+    margin: 0 auto;
+    padding: 1rem 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__wrapper {
+
+        &__title {
+            font-size: 1.7rem;
+            font-weight: 900;
+            text-align: center;
+            line-height: 2rem;
+        }
+
+        &__list {
+
+            &__wrapper {
+                padding: 2rem;
+
+                .splide__list {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-start;
+                    align-items: center;
+                    max-width: 64vw;
+
+
+                    .splide__slide {
+                        background-color: vars.$color-white;
+                        border-radius: 15px;
+                        padding: 8px;
+                        height: 80px;
+
+                        display: inline-flex;
+                        flex-direction: row;
+                        justify-content: center;
+                        align-items: center;
+
+                        img {
+                            max-width: 90%;
+                            max-height: 80px;
+                        }
+                    }
+                }
+            }
+
+            .splide__pagination {
+                bottom: auto;
+                margin-top: 8px;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%);
+            }
+
+            .splide__pagination__page {
+                background: vars.$color-white;
+                border-radius: 5px;
+                height: 7px;
+                margin: 0 4px;
+                opacity: 1;
+                width: 20px;
+                @include mixins.transition("width");
+
+                &.is-active {
+                    background: vars.$color-bright-pink;
+                    transform: none;
+                    width: 40px;
+                }
+            }
+        }
+    }
+}

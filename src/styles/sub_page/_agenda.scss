@@ -1,0 +1,178 @@
+@use "../variables" as vars;
+
+$prefix: ".agenda";
+
+#{$prefix} {
+    max-width: vars.$bp-xxl;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__head {
+
+        .title {
+            padding: 2rem 0;
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-align: center;
+            line-height: 3rem;
+
+            background-image: url(/assets/imgs/attend-title-bg.png);
+            background-position: left 40% center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__list {
+        max-width: vars.$bp-xxl;
+        margin-top: 2rem;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+
+        &__item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+
+            background-color: vars.$color-light-dark;
+            border-radius: 15px;
+            padding: 16px 16px;
+            margin: 1.5rem 0;
+
+            max-width: 680px;
+
+            @media (max-width: 825px) {
+                width: 95vw;
+            }
+
+            .schedule {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &__text {
+                    font-size: 11px;
+                    padding: 8px 0;
+                }
+
+                &__btn {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    background: vars.$color-light-gray;
+                    border: none;
+                    border-radius: 8px;
+
+                    padding: 6px;
+                    width: 60px;
+                    height: 60px;
+
+                    img {
+                        width: 24px;
+                        height: 24px;
+                    }
+
+                    span {
+                        margin-top: 4px;
+                        color: vars.$color-white;
+                        font-size: 11px;
+                    }
+                }
+            }
+
+            &>img {
+                margin: 0 1rem;
+                width: 8px;
+                height: 120px;
+            }
+
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+
+                width: 30vw;
+
+                @media (max-width:825px) {
+                    width: 90vw;
+                }
+
+                .head {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                    .character {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+
+                        img {
+                            width: 55px;
+                            height: 55px;
+                        }
+
+                        &__name {
+                            font-size: 17px;
+                        }
+
+                        &__role {
+                            font-size: 12px;
+                        }
+
+                        .custom-brand {
+                            font-size: 12px;
+                            background: -webkit-linear-gradient(225deg,
+                                    vars.$color-bright-pink 10%,
+                                    vars.$color-light-purple 100%);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
+
+                    .btn {
+                        background: none;
+                        color: vars.$color-gray;
+                        border: 1px solid vars.$color-gray;
+                        border-radius: 10px;
+                        font-size: 14px;
+                        font-weight: 700;
+
+                        height: 30px;
+                        width: 81px;
+                    }
+                }
+
+                .desc {
+                    margin-top: 1rem;
+                    font-size: 1.2rem;
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+
+    .endBtn {
+        margin-top: 1.5rem;
+        width: fit-content;
+
+        span {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        img {
+            margin-left: .6rem;
+        }
+    }
+}

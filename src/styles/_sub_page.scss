@@ -1,0 +1,126 @@
+@use "mixins" as mixins;
+@use "variables" as vars;
+
+.sub-page {
+  @import "sub_page/header";
+  @import "sub_page/hero";
+  @import "sub_page/attend";
+  @import "sub_page/about";
+  @import "sub_page/tickets";
+  @import "sub_page/discount";
+  @import "sub_page/sponsors";
+  @import "sub_page/judges";
+  @import "sub_page/agenda";
+  @import "sub_page/partners";
+
+
+  background-color: vars.$color-dark;
+  padding: 20px;
+  padding-bottom: 0;
+  margin: 0 auto;
+
+  .section {
+
+    &__stars {
+      text-align: center;
+      padding: 2rem 0;
+      animation: sparkle 1.5s infinite;
+
+      outline: 2px solid green;
+
+      img {
+        height: 100%;
+
+        @media (max-width: vars.$bp-sm) {
+          height: 72px;
+        }
+      }
+    }
+
+    &__spotlight {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-60%, -30%);
+      max-width: vars.$bp-xxl;
+      animation: sparkle 2.5s infinite;
+    }
+
+    &-title {
+      font-size: vars.$fs-h1-s;
+      font-weight: 700;
+      margin: 0 auto;
+      max-width: 780px;
+      padding-right: 32px;
+      text-align: center;
+
+      @media (max-width: vars.$bp-lg) {
+        font-size: vars.$fs-h2;
+      }
+
+      @media (max-width: vars.$bp-md) {
+        padding-right: 24px;
+        font-size: vars.$fs-h3;
+      }
+
+      @media (max-width: vars.$bp-sm) {
+        font-size: vars.$fs-h5;
+      }
+
+      @media (max-width: vars.$bp-xs) {
+        font-size: vars.$fs-h5;
+      }
+
+      &__stars {
+        height: 32px;
+
+        @media (max-width: vars.$bp-md) {
+          height: 24px;
+        }
+      }
+    }
+  }
+
+  .tabGroup {
+    max-width: vars.$bp-xxl;
+    margin: 5vh auto;
+
+    &__btn {
+      display: flex;
+      flex-direction: row;
+      flex: 1;
+      justify-content: center;
+
+      button {
+        width: fit-content;
+        height: fit-content;
+        font-size: 18px;
+        font-weight: 900;
+        margin: 0 1rem;
+        padding: .7rem 2rem;
+
+        @media (max-width: vars.$bp-md) {
+          font-size: 2.5vw;
+          height: 36px;
+          min-width: 20vw;
+          padding: 8px;
+        }
+      }
+    }
+
+    .active {
+      background-color: transparent;
+      background-image: vars.$gradient-th-line1-reverse;
+      color: white;
+    }
+  }
+
+  .footer-bg {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    background: linear-gradient(180deg, rgba(13, 14, 17, 1) 0%, rgba(13, 14, 17, 0.7372198879551821) 84%, rgba(152, 162, 255, 0.5635504201680672) 100%);
+  }
+}

@@ -1,0 +1,20 @@
+@use "sass:math";
+@use "variables" as vars;
+
+@mixin gradient($angle: 180deg, $from, $to) {
+  background: linear-gradient($angle, $from, $to);
+}
+
+@mixin font-size($size: $fs-default, $base-size: $fs-default, $unit: "rem") {
+  font-size: unquote("#{math.div($size, $base-size)}#{$unit}");
+}
+
+@mixin transition($properties) {
+  transition-duration: vars.$animation-duration;
+  transition-property: #{$properties};
+  transition-timing-function: vars.$animation-timing-function;
+}
+
+@mixin virtual-bold($color) {
+  text-shadow: .5px 0 0 $color, -.5px 0 0 $color;
+}
