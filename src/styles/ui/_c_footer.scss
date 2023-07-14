@@ -58,10 +58,13 @@
 
             .social-media-icons {
                 display: inline-flex;
-                flex-direction: row;
+                flex-flow: row wrap;
                 justify-content: flex-start;
-                flex-wrap: wrap;
                 margin: .5rem 0;
+
+                @media (max-width: vars.$bp-md) {
+                    justify-content: center;
+                }
 
                 img {
                     width: 38px;
@@ -95,7 +98,7 @@
 
             @media (max-width: vars.$bp-md) {
                 display: flex;
-                flex-direction: column;
+                flex-flow: column wrap;
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
@@ -108,15 +111,19 @@
 
     &__text {
         font-size: 1rem;
-        text-align: start;
         line-height: 1.5rem;
         word-wrap: break-word;
         white-space: normal;
+        text-align: start;
         margin: .3rem 0;
 
         display: inline-flex;
         flex-flow: row nowrap;
         justify-content: flex-start;
+
+        @media (max-width: vars.$bp-md) {
+            text-align: center;
+        }
 
         img {
             height: 30px;

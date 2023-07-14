@@ -36,6 +36,10 @@
     @media (max-width: vars.$bp-sm) {
       justify-content: space-between;
     }
+
+    @media (max-width: vars.$bp-xs) {
+      justify-content: flex-end;
+    }
   }
 
   &__logo {
