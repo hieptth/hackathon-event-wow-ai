@@ -24,6 +24,11 @@ $prefix-1: ".outlets";
             line-height: 2rem;
             height: 5vw;
 
+            @media (max-width: vars.$bp-sm) {
+                font-size: 1.8rem;
+                line-height: 1.5rem;
+            }
+
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -104,6 +109,11 @@ $prefix-1: ".outlets";
             font-weight: 900;
             text-align: center;
             line-height: 2rem;
+
+            @media (max-width: vars.$bp-sm) {
+                font-size: 1.2rem;
+                line-height: 1.5rem;
+            }
         }
 
         &__list {
