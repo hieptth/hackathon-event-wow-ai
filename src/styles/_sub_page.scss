@@ -93,6 +93,12 @@
       flex: 1;
       justify-content: center;
 
+      @media (max-width: vars.$bp-xs) {
+        flex-flow: column wrap;
+        align-items: center;
+        padding: 0 .5rem;
+      }
+
       button {
         width: fit-content;
         font-size: 18px;
@@ -109,6 +115,11 @@
         @media (max-width: vars.$bp-sm) {
           font-size: .75rem;
           padding: .7rem;
+        }
+
+        @media (max-width: vars.$bp-xs) {
+          margin: 1rem 0 0;
+          width: 100%;
         }
       }
     }
