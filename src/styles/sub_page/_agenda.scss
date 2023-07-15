@@ -32,8 +32,7 @@ $prefix: ".agenda";
         margin-top: 2rem;
 
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-flow: row wrap;
         justify-content: space-evenly;
 
 
@@ -50,6 +49,11 @@ $prefix: ".agenda";
 
             max-width: 680px;
 
+            @media (max-width: vars.$bp-sm) {
+                flex-flow: column wrap;
+                justify-content: center;
+            }
+
             @media (max-width: 825px) {
                 width: 95vw;
             }
@@ -58,6 +62,13 @@ $prefix: ".agenda";
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+
+                @media (max-width: vars.$bp-sm) {
+                    flex-flow: row wrap;
+                    width: 100%;
+                    justify-content: space-evenly;
+                    padding: .5rem 0;
+                }
 
                 &__text {
                     font-size: 11px;
@@ -78,9 +89,19 @@ $prefix: ".agenda";
                     width: 60px;
                     height: 60px;
 
+                    @media (max-width: vars.$bp-sm) {
+                        height: auto;
+                        width: fit-content;
+                        padding: .25rem .75rem;
+                    }
+
                     img {
                         width: 24px;
                         height: 24px;
+
+                        @media (max-width: vars.$bp-sm) {
+                            display: none;
+                        }
                     }
 
                     span {
@@ -95,6 +116,10 @@ $prefix: ".agenda";
                 margin: 0 1rem;
                 width: 8px;
                 height: 120px;
+
+                @media (max-width: vars.$bp-sm) {
+                    display: none;
+                }
             }
 
             .wrapper {
@@ -105,6 +130,11 @@ $prefix: ".agenda";
 
                 @media (max-width:825px) {
                     width: 90vw;
+                }
+
+                @media (max-width: vars.$bp-sm) {
+                    width: 100%;
+                    padding: .5rem;
                 }
 
                 .head {
@@ -150,6 +180,10 @@ $prefix: ".agenda";
 
                         height: 30px;
                         width: 81px;
+
+                        @media (max-width: vars.$bp-sm) {
+                            font-size: 12px;
+                        }
                     }
                 }
 
@@ -157,6 +191,11 @@ $prefix: ".agenda";
                     margin-top: 1rem;
                     font-size: 1.2rem;
                     line-height: 1.5rem;
+
+                    @media (max-width: (vars.$bp-sm + 30)) {
+                        font-size: 16px;
+                        text-align: center;
+                    }
                 }
             }
         }

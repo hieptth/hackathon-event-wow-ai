@@ -5,6 +5,7 @@ $prefix: ".discount";
 #{$prefix} {
     max-width: vars.$bp-xxl;
     margin: 0 auto;
+    padding-top: 1rem;
 
     &__wrapper {
         display: flex;
