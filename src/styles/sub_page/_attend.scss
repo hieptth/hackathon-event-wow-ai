@@ -4,8 +4,7 @@ $prefix: ".attend";
 
 #{$prefix} {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: flex-start;
     padding: 1rem 4rem;
@@ -23,6 +22,10 @@ $prefix: ".attend";
         padding-bottom: 5rem;
     }
 
+    @media (min-width: (vars.$bp-xl + 1)) and (max-width: (vars.$bp-xxl + 40)) {
+        flex-flow: row nowrap;
+    }
+
     &__title {
         display: flex;
         flex-direction: column;
@@ -35,6 +38,7 @@ $prefix: ".attend";
         h1 {
             font-size: 2.7rem;
             margin: 1.5rem 0;
+            white-space: nowrap;
 
             @media (max-width: vars.$bp-md) {
                 line-height: 2.5rem;
@@ -49,6 +53,14 @@ $prefix: ".attend";
             padding: .5rem 0;
             max-height: 70px;
 
+            a {
+                margin-right: .6rem;
+
+                span {
+                    white-space: nowrap;
+                }
+            }
+
 
             .navBtn {
                 display: flex;
@@ -58,6 +70,10 @@ $prefix: ".attend";
                 justify-content: space-around;
                 max-width: 120px;
                 width: 100%;
+
+                #btnPrev {
+                    margin-right: .6rem;
+                }
 
                 button {
                     background: none;
@@ -80,7 +96,7 @@ $prefix: ".attend";
         align-items: center;
 
         @media (max-width: vars.$bp-xl) {
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
 
         &__wrapper {

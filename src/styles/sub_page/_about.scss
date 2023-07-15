@@ -13,14 +13,26 @@ $prefix: ".about";
 
 
         &__title {
-            max-width: 45vw;
             margin: 0 auto;
+            max-width: 50%;
+
+            @media (max-width: vars.$bp-xxl) {
+                max-width: 65%;
+            }
+
+            @media (max-width: vars.$bp-md) {
+                max-width: 70%;
+            }
 
             h1 {
                 font-size: 2.5rem;
                 text-align: center;
                 line-height: 3rem;
                 margin: 0 auto;
+
+                @media (max-width: 620px) {
+                    font-size: 2rem;
+                }
             }
 
         }
@@ -28,9 +40,8 @@ $prefix: ".about";
         &__content {
 
             display: flex;
-            flex-direction: row;
+            flex-flow: row wrap;
             justify-content: center;
-            flex-wrap: wrap;
 
             @media (max-width: vars.$bp-lg) {
                 flex-direction: column;
@@ -38,24 +49,50 @@ $prefix: ".about";
             }
 
             #globe {
-                margin: 0 .5rem 0 -5rem;
-                max-height: 70vh;
-                max-width: 400px;
-                height: 100%;
-                width: 50vw;
-                overflow: hidden;
+                position: relative;
+                z-index: -1;
+                width: 35%;
 
-                @media (max-width: vars.$bp-lg) {
-                    max-height: 70vh;
-                    margin: 0;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: flex-start;
+
+                @media (min-width: vars.$bp-xxl) {
+                    width: 30%;
+                    transform: scale(0.9);
+                }
+
+                @media (min-width: vars.$bp-xl) and (max-width: (vars.$bp-xxl - 1)) {
+                    transform: scale(0.8);
+                }
+
+                @media (min-width: vars.$bp-md) and (max-width: vars.$bp-xl) {
+                    width: 40%;
+                }
+
+                @media (max-width: vars.$bp-md) {
+                    width: 70%;
                 }
             }
 
             .desc {
-                max-width: 380px;
                 display: flex;
-                align-items: flex-start;
+                align-items: center;
+                width: 25%;
                 padding-top: 2rem;
+
+                @media (min-width: vars.$bp-3xl) {
+                    width: 30%;
+                }
+
+                @media (min-width: vars.$bp-xl) and ((max-width: vars.$bp-3xl)) {
+                    margin-left: -3rem;
+                }
+
+                @media (max-width: vars.$bp-xl) {
+                    width: 70%;
+                }
 
                 p {
                     text-align: justify;
@@ -63,6 +100,11 @@ $prefix: ".about";
                     font-size: 12px;
                     font-weight: 400;
                     margin-bottom: 1rem;
+
+                    @media (min-width: vars.$bp-3xl) {
+                        font-size: .9rem;
+                        line-height: 1.3rem;
+                    }
                 }
             }
         }
