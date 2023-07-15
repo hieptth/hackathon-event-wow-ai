@@ -100,9 +100,15 @@
         margin: 0 .5rem;
         padding: .7rem 1rem;
 
+        min-width: 25%;
+
         @media (max-width: vars.$bp-md) {
-          font-size: 1rem;
-          min-width: 15vw;
+          font-size: .9rem;
+        }
+
+        @media (max-width: vars.$bp-sm) {
+          font-size: .75rem;
+          padding: .7rem;
         }
       }
     }
