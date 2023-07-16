@@ -10,7 +10,20 @@ import {
 import { smoothAnchor, openTab } from "./_shared.js";
 
 window.addEventListener("DOMContentLoaded", function () {
-  initComponentNavbar();
+  initComponentNavbar(
+    "landing__nav",
+    "landing__nav__links",
+    "landing__nav__links--open",
+    "landing__nav__btnGroup",
+    "landing__nav__links--close"
+  );
+  initComponentNavbar(
+    "c-navbar",
+    "c-navbar__links",
+    "c-navbar__links--open",
+    "c-navbar__right-menu",
+    "c-navbar__links-close"
+  );
 });
 
 window.site = {

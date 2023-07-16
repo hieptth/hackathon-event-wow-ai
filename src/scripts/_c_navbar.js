@@ -1,11 +1,10 @@
-const CLASS_NAVBAR = "c-navbar";
-const CLASS_NAVBAR_LINKS = "c-navbar__links";
-const CLASS_NAVBAR_LINKS_OPEN = "c-navbar__links--open";
-const CLASS_NAVBAR_OPEN_TRIGGER = "c-navbar__right-menu";
-const CLASS_NAVBAR_CONTACT = "c-navbar__right-contact"
-const CLASS_NAVBAR_CLOSE_TRIGGER = "c-navbar__links-close";
-
-export default function initComponentNavbar() {
+export default function initComponentNavbar(
+  CLASS_NAVBAR,
+  CLASS_NAVBAR_LINKS,
+  CLASS_NAVBAR_LINKS_OPEN,
+  CLASS_NAVBAR_OPEN_TRIGGER,
+  CLASS_NAVBAR_CLOSE_TRIGGER
+) {
   const navbar = document.querySelector("." + CLASS_NAVBAR);
   if (!navbar) return;
   const navbarLinks = navbar.querySelector("." + CLASS_NAVBAR_LINKS);
@@ -17,7 +16,7 @@ export default function initComponentNavbar() {
   }
 
   function close() {
-    navbarLinks.classList.remove(CLASS_NAVBAR_LINKS_OPEN)
+    navbarLinks.classList.remove(CLASS_NAVBAR_LINKS_OPEN);
   }
 
   for (let i = 0; i < navbarLinks.children.length; i++) {
@@ -40,13 +39,28 @@ export default function initComponentNavbar() {
     });
   }
 
-  const navEl = document.querySelector('.c-navbar');
+  const navEl = document.querySelector(".c-navbar");
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY >= 80) {
-      navEl.classList.add('navbar-scrolled');
-    } else if (window.scrollY <= 80) {
-      navEl.classList.remove('navbar-scrolled');
+  window.addEventListener("scroll", () => {
+    var section1 = document.getElementById("landingPage");
+    var section1Height = section1.offsetHeight;
+
+    // if (window.scrollY < window.document.body.clientHeight) {
+    //   console.log("hehe");
+    //   document.getElementById("attend").scrollIntoView();
+    // }
+
+    if (window.scrollY > section1Height - 150) {
+      navEl.style.display = "block";
+      document.getElementById("landingPage").style.display = "none";
+    } else {
+      navEl.style.display = "none";
+    }
+
+    if (window.scrollY >= section1Height + 80) {
+      navEl.classList.add("navbar-scrolled");
+    } else if (window.scrollY <= section1Height + 80) {
+      navEl.classList.remove("navbar-scrolled");
     }
   });
 }

@@ -2,14 +2,14 @@
 @use "../variables" as vars;
 
 .c-navbar {
-  display: block;
+  display: none;
   position: fixed;
   width: 100%;
   z-index: 9999;
   margin: 0 auto;
   inset: 0;
   height: min-content;
-  transition: all 0.5s ease;
+  transition: background-color 0.5s ease;
 
   &__wrapper {
     display: inline-flex;
@@ -231,8 +231,6 @@
       &:hover {
         background-image: vars.$gradient-grad-reverse;
       }
-
-      @media (max-width: vars.$bp-sm) {}
 
       @media (min-width: (vars.$bp-xl + 1)) {
         display: none;

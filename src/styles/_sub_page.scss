@@ -19,6 +19,12 @@
   padding-bottom: 0;
   margin: 0 auto;
 
+  width: 100vw;
+  overflow-x: hidden;
+
+  overflow-y: auto;
+  scroll-snap-align: start;
+
   @media (max-width: 428px) {
     padding: 20px 8px;
   }

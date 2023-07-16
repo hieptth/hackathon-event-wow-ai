@@ -160,7 +160,7 @@
         }
 
         .net-bg {
-          border-radius: 18px;
+          border-radius: 23px;
           border: 1px solid vars.$color-white;
           background-image: url(/assets/imgs/highlight-card.png);
           background-position: center center;
@@ -168,9 +168,9 @@
           background-size: cover;
 
           .card-grid {
-            border-radius: 18px;
-            padding: 6%;
-            padding-bottom: 3%;
+            border-radius: 23px;
+            padding: 26px;
+            padding-bottom: 4%;
 
             background: none;
 
