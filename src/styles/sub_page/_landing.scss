@@ -256,10 +256,6 @@ $prefix: ".landing";
         align-items: flex-start;
         justify-content: flex-end;
 
-        // dev
-        // min-height: 50vh;
-        // outline: 3px solid beige;
-
         &__btnGroup {
             display: flex;
             flex-flow: row wrap;
@@ -306,6 +302,97 @@ $prefix: ".landing";
 
             @media (max-width: vars.$bp-sm) {
                 font-size: 2.7rem;
+            }
+        }
+
+        &__extras {
+            width: 95%;
+            padding: 1rem 0;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: space-between;
+
+            .stats {
+                width: 25%;
+                height: 100%;
+                display: flex;
+                flex-flow: column wrap;
+                flex: 2 2 auto;
+                align-items: center;
+                justify-content: flex-start;
+
+                &>* {
+                    line-height: normal;
+                    text-align: center;
+                }
+
+                .numbers {
+                    font-size: 2.5vw;
+
+                    @media (max-width: (vars.$bp-md)) {
+                        font-size: 2rem;
+                    }
+
+                    @media (max-width: vars.$bp-sm) {
+                        font-size: 1.5rem;
+                    }
+
+                    @media (max-width: vars.$bp-xs) {
+                        font-size: 1.15rem;
+                    }
+                }
+
+                .cate {
+                    font-size: 1.1vw;
+                    font-weight: 400;
+
+                    @media (max-width: (vars.$bp-md)) {
+                        font-size: .75rem;
+                    }
+
+                    @media (max-width: vars.$bp-sm) {
+                        font-size: .5rem;
+                    }
+                }
+            }
+
+            .stats:first-child {
+                width: 20%;
+                align-items: flex-start;
+
+                * {
+                    text-align: start;
+                }
+            }
+
+            .stats:last-child {
+                width: 20%;
+                align-items: flex-end;
+
+                * {
+                    text-align: end;
+                }
+            }
+
+            img {
+                flex: 0 1 auto;
+                border: none;
+                background-color: vars.$color-white;
+                width: 1px;
+                height: 56px;
+
+                @media (max-width: (vars.$bp-md)) {
+                    height: 45px;
+                }
+
+                @media (max-width: vars.$bp-sm) {
+                    height: 40px;
+                }
+
+                @media (max-width: vars.$bp-xs) {
+                    height: 40px;
+                }
             }
         }
 
