@@ -64,9 +64,10 @@ $prefix: ".landing";
             a {
                 font-size: 1.5rem;
                 font-weight: 700;
+                line-height: normal;
 
                 &:hover {
-                    background: vars.$gradient-grad;
+                    background: vars.$gradient-cta;
                     -webkit-background-clip: text;
                     -webkit-box-decoration-break: clone;
                     -webkit-text-fill-color: transparent;
@@ -261,7 +262,32 @@ $prefix: ".landing";
         min-height: 50vh;
         outline: 3px solid beige;
 
-        &__btnGroup {}
+        &__btnGroup {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            align-items: center;
+
+            a {
+                border: none;
+                background-color: vars.$color-d1;
+                border-radius: 26px;
+                padding: 2vh 2rem;
+                margin: 0 1rem .5rem 0;
+
+                font-size: 1.1vw;
+                font-weight: 600;
+
+                @media (max-width: (vars.$bp-md)) {
+                    font-size: 1rem;
+                }
+
+                @media (max-width: vars.$bp-sm) {
+                    font-size: .75rem;
+                    padding: 1vh 1rem;
+                }
+            }
+        }
 
         &__timer {
             display: flex;
@@ -271,25 +297,17 @@ $prefix: ".landing";
 
             width: 100%;
 
-            font-size: 7rem;
+            font-size: 9vw;
             line-height: 100%;
             font-family: 'Montserrat', sans-serif;
             font-weight: 900;
 
-            @media (max-width: (vars.$bp-xl - 1)) {
-                font-size: 6rem;
-            }
-
-            @media (max-width: vars.$bp-lg) {
-                font-size: 5rem;
-            }
-
-            @media (max-width: (vars.$bp-md + 80)) {
+            @media (max-width: (vars.$bp-md)) {
                 font-size: 3.5rem;
             }
 
             @media (max-width: vars.$bp-sm) {
-                font-size: 2.5rem;
+                font-size: 2.7rem;
             }
         }
 
@@ -299,7 +317,8 @@ $prefix: ".landing";
 
             &>* {
                 font-family: 'Montserrat', sans-serif;
-                font-size: 3rem;
+                // font-size: 3rem;
+                font-size: 3.5vw;
                 font-style: normal;
                 font-weight: 700;
                 line-height: normal;
@@ -309,19 +328,7 @@ $prefix: ".landing";
                 color: vars.$color-white;
             }
 
-            @media (max-width: (vars.$bp-xl - 1)) {
-                &>* {
-                    font-size: 2.5rem;
-                }
-            }
-
-            @media (max-width: vars.$bp-lg) {
-                &>* {
-                    font-size: 2rem;
-                }
-            }
-
-            @media (max-width: (vars.$bp-md + 80)) {
+            @media (max-width: (vars.$bp-md)) {
                 &>* {
                     font-size: 1.5rem;
                 }
@@ -329,7 +336,7 @@ $prefix: ".landing";
 
             @media (max-width: vars.$bp-sm) {
                 &>* {
-                    font-size: 1rem;
+                    font-size: 1.15rem;
                 }
             }
         }
