@@ -246,7 +246,7 @@ $prefix: ".landing";
     &__content {
         position: relative;
         width: 100%;
-        padding: 0 2vw;
+        padding: 0 4vw;
         z-index: 5;
 
         background: linear-gradient(180deg, rgba(10, 9, 12, 0) 0%, rgba(127, 120, 255, 1) 100%);
@@ -330,6 +330,10 @@ $prefix: ".landing";
                 .numbers {
                     font-size: 2.5vw;
 
+                    @media (max-width: (vars.$bp-lg)) {
+                        font-size: 2.15rem;
+                    }
+
                     @media (max-width: (vars.$bp-md)) {
                         font-size: 2rem;
                     }
@@ -346,6 +350,10 @@ $prefix: ".landing";
                 .cate {
                     font-size: 1.1vw;
                     font-weight: 400;
+
+                    @media (max-width: (vars.$bp-lg)) {
+                        font-size: .85rem;
+                    }
 
                     @media (max-width: (vars.$bp-md)) {
                         font-size: .75rem;
@@ -387,7 +395,7 @@ $prefix: ".landing";
                 }
 
                 @media (max-width: vars.$bp-sm) {
-                    height: 40px;
+                    height: 45px;
                 }
 
                 @media (max-width: vars.$bp-xs) {
