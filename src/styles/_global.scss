@@ -21,10 +21,6 @@
   // background-color: rgba(195, 255, 0, 0.1);
 }
 
-html {
-  scroll-snap-type: y mandatory;
-}
-
 html,
 body {
   background-color: vars.$color-dark;
@@ -33,11 +29,10 @@ body {
   position: relative;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
   width: 100vw;
   min-height: 100dvh;
   margin: 0 auto;
-  // scroll-snap-type: y mandatory;
 }
 
 html::-webkit-scrollbar,

@@ -6,6 +6,7 @@ $prefix: ".landing";
 #{$prefix} {
     width: 100vw;
     height: 100dvh;
+    transition: all 2s ease;
 
     display: flex;
     flex-flow: column wrap;
@@ -25,9 +26,6 @@ $prefix: ".landing";
     @media (max-width: (vars.$bp-xs - 80)) {
         justify-content: flex-end;
     }
-
-    // dev
-    // scroll-snap-align: start;
 
     #introVideo {
         position: absolute;

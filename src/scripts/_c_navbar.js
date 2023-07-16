@@ -45,12 +45,7 @@ export default function initComponentNavbar(
     var section1 = document.getElementById("landingPage");
     var section1Height = section1.offsetHeight;
 
-    // if (window.scrollY < window.document.body.clientHeight) {
-    //   console.log("hehe");
-    //   document.getElementById("attend").scrollIntoView();
-    // }
-
-    if (window.scrollY > section1Height - 150) {
+    if (window.scrollY > section1Height - window.innerHeight) {
       navEl.style.display = "block";
       document.getElementById("landingPage").style.display = "none";
     } else {
@@ -64,3 +59,17 @@ export default function initComponentNavbar(
     }
   });
 }
+
+function fullscreenScroll() {
+  document.body.scrollTo(0, window.innerHeight);
+
+  var section1 = document.getElementById("landingPage");
+  var section1Height = section1.offsetHeight;
+
+  console.log(window.innerHeight);
+  console.log("section", section1Height);
+}
+
+window.document.getElementById("scroll-down").addEventListener("click", () => {
+  setTimeout(fullscreenScroll(), 0);
+});
