@@ -45,7 +45,7 @@ export default function initComponentNavbar(
     var section1 = document.getElementById("landingPage");
     var section1Height = section1.offsetHeight;
 
-    if (window.scrollY > section1Height - window.innerHeight) {
+    if (window.scrollY > section1Height - window.innerHeight - 80) {
       navEl.style.display = "block";
       document.getElementById("landingPage").style.display = "none";
     } else {
@@ -60,16 +60,6 @@ export default function initComponentNavbar(
   });
 }
 
-function fullscreenScroll() {
-  document.body.scrollTo(0, window.innerHeight);
-
-  var section1 = document.getElementById("landingPage");
-  var section1Height = section1.offsetHeight;
-
-  console.log(window.innerHeight);
-  console.log("section", section1Height);
-}
-
 window.document.getElementById("scroll-down").addEventListener("click", () => {
-  setTimeout(fullscreenScroll(), 0);
+  document.body.scrollTo(0, window.innerHeight);
 });

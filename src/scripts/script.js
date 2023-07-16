@@ -7,14 +7,14 @@ import {
   sponsorsSlide,
   typingHeroText,
 } from "./_page_home.js";
-import { smoothAnchor, openTab } from "./_shared.js";
+import { smoothAnchor, openTab, countdownTimer } from "./_shared.js";
 
 window.addEventListener("DOMContentLoaded", function () {
   initComponentNavbar(
     "landing__nav",
     "landing__nav__links",
     "landing__nav__links--open",
-    "landing__nav__btnGroup",
+    "landing__nav__btnGroup-menu",
     "landing__nav__links--close"
   );
   initComponentNavbar(
@@ -30,6 +30,7 @@ window.site = {
   shared: {
     smoothAnchor: smoothAnchor,
     openTab: openTab,
+    countdownTimer: countdownTimer,
   },
   home: {
     entranceAnimation: entranceAnimation,

@@ -1,31 +1,17 @@
 @use '../variables' as vars;
 @use '../mixins/' as mixins;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 $prefix: ".landing";
 
 #{$prefix} {
     width: 100vw;
     height: 100dvh;
-    transition: all 2s ease;
+    overflow: hidden;
 
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
-
-    @media (max-width: vars.$bp-xl) {
-        align-items: flex-start;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    @media (max-width: vars.$bp-sm) {
-        justify-content: space-between;
-    }
-
-    @media (max-width: (vars.$bp-xs - 80)) {
-        justify-content: flex-end;
-    }
 
     #introVideo {
         position: absolute;
@@ -257,9 +243,137 @@ $prefix: ".landing";
     }
 
     &__content {
+        position: relative;
+        width: 100%;
+        padding: 0 2vw;
+        z-index: 5;
 
-        background: linear-gradient(180deg, rgba(10, 9, 12, 0.00) 0%, #7F78FF 99.48%);
+        background: linear-gradient(180deg, rgba(10, 9, 12, 0.00) 30%, #7F78FF 99.48%);
         background-position: center bottom;
         background-size: cover;
+
+        display: flex;
+        flex-flow: column wrap;
+        align-items: flex-start;
+        justify-content: flex-end;
+
+        // dev
+        min-height: 50vh;
+        outline: 3px solid beige;
+
+        &__btnGroup {}
+
+        &__timer {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: flex-start;
+
+            width: 100%;
+
+            font-size: 7rem;
+            line-height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+
+            @media (max-width: (vars.$bp-xl - 1)) {
+                font-size: 6rem;
+            }
+
+            @media (max-width: vars.$bp-lg) {
+                font-size: 5rem;
+            }
+
+            @media (max-width: (vars.$bp-md + 80)) {
+                font-size: 3.5rem;
+            }
+
+            @media (max-width: vars.$bp-sm) {
+                font-size: 2.5rem;
+            }
+        }
+
+        &__title {
+
+            color: vars.$color-bright-pink;
+
+            &>* {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 3rem;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+
+            .normalText {
+                color: vars.$color-white;
+            }
+
+            @media (max-width: (vars.$bp-xl - 1)) {
+                &>* {
+                    font-size: 2.5rem;
+                }
+            }
+
+            @media (max-width: vars.$bp-lg) {
+                &>* {
+                    font-size: 2rem;
+                }
+            }
+
+            @media (max-width: (vars.$bp-md + 80)) {
+                &>* {
+                    font-size: 1.5rem;
+                }
+            }
+
+            @media (max-width: vars.$bp-sm) {
+                &>* {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        &__downBtn {
+            margin: 0 auto;
+            cursor: pointer;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+            padding-top: .3rem;
+
+            width: 240px;
+            height: 50px;
+
+            border-top-left-radius: 16px;
+            border-top-right-radius: 16px;
+            border: none;
+
+            @media (max-width: 280px) {
+                width: 90%;
+            }
+
+            img {
+                width: 21px;
+                height: 21px;
+                margin-right: .25rem;
+
+                @media (max-width: 280px) {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+
+            span {
+                font-size: 1.2rem;
+                color: vars.$color-blue-pink;
+                font-weight: 700;
+
+                @media (max-width: 280px) {
+                    font-size: 1rem;
+                }
+            }
+        }
     }
 }

@@ -89,7 +89,7 @@
       }
 
       @media (max-width: vars.$bp-md) {
-        margin-top: 1.5rem;
+        // max-width: 280px;
       }
 
       @media (max-width: vars.$bp-sm) {
@@ -115,6 +115,11 @@
             height: 260px;
             border-radius: 15px;
             margin-bottom: .5rem;
+
+            @media (max-width: vars.$bp-sm) {
+              max-width: 100%;
+              height: auto;
+            }
           }
 
           .desc {
@@ -126,6 +131,10 @@
             .card-title {
               text-align: left;
               font-size: 14px;
+
+              @media (max-width: vars.$bp-xs) {
+                font-size: 12px;
+              }
             }
 
             p {
@@ -169,7 +178,7 @@
 
           .card-grid {
             border-radius: 23px;
-            padding: 26px;
+            padding: 6%;
             padding-bottom: 4%;
 
             background: none;
