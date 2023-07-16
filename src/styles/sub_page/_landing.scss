@@ -249,9 +249,7 @@ $prefix: ".landing";
         padding: 0 2vw;
         z-index: 5;
 
-        background: linear-gradient(180deg, rgba(10, 9, 12, 0.00) 30%, #7F78FF 99.48%);
-        background-position: center bottom;
-        background-size: cover;
+        background: linear-gradient(180deg, rgba(10, 9, 12, 0) 0%, rgba(127, 120, 255, 1) 100%);
 
         display: flex;
         flex-flow: column wrap;
@@ -259,8 +257,8 @@ $prefix: ".landing";
         justify-content: flex-end;
 
         // dev
-        min-height: 50vh;
-        outline: 3px solid beige;
+        // min-height: 50vh;
+        // outline: 3px solid beige;
 
         &__btnGroup {
             display: flex;
@@ -297,7 +295,7 @@ $prefix: ".landing";
 
             width: 100%;
 
-            font-size: 9vw;
+            font-size: 8.7vw;
             line-height: 100%;
             font-family: 'Montserrat', sans-serif;
             font-weight: 900;
