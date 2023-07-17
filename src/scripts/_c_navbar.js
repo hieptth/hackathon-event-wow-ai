@@ -44,10 +44,14 @@ export default function initComponentNavbar(
   const section1Height = section1.offsetHeight;
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > section1Height - 80) {
-      navEl.style.display = "block";
+    if (window.scrollY > section1Height) {
+      section1.style.display = "none";
     } else {
       navEl.style.display = "none";
+    }
+
+    if (section1.style.display == "none") {
+      navEl.style.display = "block";
     }
 
     if (window.scrollY >= section1Height + 80) {
@@ -58,6 +62,10 @@ export default function initComponentNavbar(
   });
 }
 
-window.document.getElementById("scroll-down").addEventListener("click", () => {
-  document.body.scrollTo(0, window.innerHeight);
+const scrollDown = window.document.getElementById("scroll-down");
+
+scrollDown.addEventListener("click", () => {
+  scrollDown.scrollTop += window.innerHeight;
 });
+
+console.log(scrollDown.scrollTop, window.innerHeight);
