@@ -40,14 +40,13 @@ export default function initComponentNavbar(
   }
 
   const navEl = document.querySelector(".c-navbar");
+  const section1 = document.getElementById("landingPage");
+  const section1Height = section1.offsetHeight;
 
   window.addEventListener("scroll", () => {
-    var section1 = document.getElementById("landingPage");
-    var section1Height = section1.offsetHeight;
-
     if (window.scrollY > section1Height - window.innerHeight - 80) {
       navEl.style.display = "block";
-      document.getElementById("landingPage").style.display = "none";
+      section1.style.display = "none";
     } else {
       navEl.style.display = "none";
     }

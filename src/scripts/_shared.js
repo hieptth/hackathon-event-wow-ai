@@ -122,6 +122,8 @@ export function openTab(evt, value, curBtn, hideClass, deactivateBtn) {
   document.getElementById(curBtn).classList.add("active");
 }
 
+const timer = document.getElementById("timer");
+
 export function countdownTimer() {
   // Set the date we're counting down to
   var countDownDate = new Date("Sep 28, 2023 09:00:00").getTime();
@@ -143,7 +145,7 @@ export function countdownTimer() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="timer"
-    document.getElementById("timer").innerHTML =
+    timer.innerHTML =
       days + "D : " + hours + "h : " + minutes + "m :" + seconds + "s";
 
     // If the count down is finished, write some text
