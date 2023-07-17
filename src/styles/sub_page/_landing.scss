@@ -249,7 +249,10 @@ $prefix: ".landing";
         padding: 0 4vw;
         z-index: 5;
 
-        background: linear-gradient(180deg, rgba(10, 9, 12, 0) 0%, rgba(127, 120, 255, 1) 100%);
+        background: linear-gradient(0deg, rgba(14, 15, 18, 1) 20%, rgba(211, 211, 211, 0.01) 100%);
+
+        // ** Old background
+        // background: linear-gradient(180deg, rgba(10, 9, 12, 0) 0%, rgba(127, 120, 255, 1) 100%);
 
         display: flex;
         flex-flow: column wrap;
@@ -441,13 +444,16 @@ $prefix: ".landing";
             flex-flow: row nowrap;
             justify-content: center;
             align-items: center;
-            padding-top: .3rem;
+            // padding-top: .3rem;
 
             width: 240px;
             height: 50px;
 
-            border-top-left-radius: 16px;
-            border-top-right-radius: 16px;
+            // ** Old button
+            // border-top-left-radius: 16px;
+            // border-top-right-radius: 16px;
+
+            border-radius: 32px;
             border: none;
 
             @media (max-width: 280px) {

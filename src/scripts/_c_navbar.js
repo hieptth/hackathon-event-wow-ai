@@ -45,18 +45,14 @@ export default function initComponentNavbar(
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > section1Height) {
-      section1.style.display = "none";
+      navEl.style.display = "block";
     } else {
       navEl.style.display = "none";
     }
 
-    if (section1.style.display == "none") {
-      navEl.style.display = "block";
-    }
-
-    if (window.scrollY >= section1Height + 80) {
+    if (window.scrollY >= section1Height + 100) {
       navEl.classList.add("navbar-scrolled");
-    } else if (window.scrollY <= section1Height + 80) {
+    } else if (window.scrollY <= section1Height + 100) {
       navEl.classList.remove("navbar-scrolled");
     }
   });
