@@ -44,9 +44,8 @@ export default function initComponentNavbar(
   const section1Height = section1.offsetHeight;
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > section1Height - window.innerHeight - 80) {
+    if (window.scrollY > section1Height - 80) {
       navEl.style.display = "block";
-      section1.style.display = "none";
     } else {
       navEl.style.display = "none";
     }

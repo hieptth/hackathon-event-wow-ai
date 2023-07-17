@@ -145,11 +145,7 @@
   }
 
   .footer-bg {
-    position: absolute;
     z-index: 1;
-    top: 100%;
-    left: 0;
-    width: 100vw;
     background: linear-gradient(180deg, rgba(13, 14, 17, 1) 0%, rgba(13, 14, 17, 0.7372198879551821) 68%, rgba(196, 102, 255, 0.393) 100%);
   }
 }

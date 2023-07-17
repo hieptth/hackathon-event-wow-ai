@@ -26,18 +26,10 @@ body {
   background-color: vars.$color-dark;
   box-sizing: border-box;
   color: vars.$color-white;
-  position: relative;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  overflow-y: scroll;
-  width: 100vw;
   min-height: 100dvh;
   margin: 0 auto;
-}
-
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-  display: none;
 }
 
 a {
