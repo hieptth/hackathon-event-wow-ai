@@ -20,7 +20,7 @@ const container = document.getElementById("globe");
 // SECTION Initializing core ThreeJS elements
 function init() {
   // Initialize renderer
-  renderer = new WebGLRenderer({ antialias: true });
+  renderer = new WebGLRenderer({ antialias: true, alpha: true });
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(container.clientWidth, container.clientWidth);
   renderer.domElement.style.transform = "rotateZ(-13.5deg)";
@@ -28,7 +28,6 @@ function init() {
   // Initialize scene, light
   scene = new Scene();
   scene.add(new AmbientLight(0xbbbbbb, 0.3));
-  scene.background = new Color(0x0d0e11);
 
   // Initialize camera, light
   camera = new PerspectiveCamera();

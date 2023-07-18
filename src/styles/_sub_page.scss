@@ -2,7 +2,6 @@
 @use "variables" as vars;
 
 .sub-page {
-  @import "sub_page/header";
   @import "sub_page/hero";
   @import "sub_page/attend";
   @import "sub_page/about";
@@ -29,6 +28,13 @@
 
   @media (max-width: 428px) {
     padding: 20px 8px;
+  }
+
+  #space-net {
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    width: 100vw;
   }
 
   .section {

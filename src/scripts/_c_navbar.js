@@ -58,10 +58,8 @@ export default function initComponentNavbar(
   });
 }
 
-const scrollDown = window.document.getElementById("scroll-down");
+// const scrollDown = window.document.getElementById("scroll-down");
 
-scrollDown.addEventListener("click", () => {
-  scrollDown.scrollTop += window.innerHeight;
-});
-
-console.log(scrollDown.scrollTop, window.innerHeight);
+// scrollDown.addEventListener("click", () => {
+//   scrollDown.scrollTop += window.innerHeight;
+// });

@@ -6,6 +6,7 @@ $prefix: ".agenda";
     max-width: vars.$bp-xxl;
     margin: 0 auto;
     padding-bottom: 1rem;
+    transition: all 1s ease;
 
     display: flex;
     flex-direction: column;
@@ -56,6 +57,11 @@ $prefix: ".agenda";
 
             @media (max-width: 825px) {
                 width: 95vw;
+            }
+
+            &:hover {
+                border: 1px solid vars.$color-light-pink;
+                box-shadow: 13px 11px 38px 0px rgba(246, 212, 255, 0.20);
             }
 
             .schedule {
