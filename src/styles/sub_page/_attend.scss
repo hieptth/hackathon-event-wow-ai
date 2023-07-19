@@ -108,6 +108,7 @@ $prefix: ".attend";
 
     &__list {
         margin: 0 1rem;
+        position: relative;
         max-width: calc(calc(vars.$bp-xxl - 13rem) - 320px);
         width: 100%;
         display: flex;

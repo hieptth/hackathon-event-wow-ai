@@ -48,7 +48,7 @@ export function attendSlide() {
         arrows: false,
         pauseOnHover: true,
         drag: true,
-        type: "slide",
+        type: "loop",
         gap: "1.5rem",
         pagination: false,
         perPage: 3,
