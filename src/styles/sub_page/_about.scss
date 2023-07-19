@@ -9,9 +9,50 @@ $prefix: ".about";
     margin: 0 auto;
     margin-top: 10vh;
 
-    &__wrapper {
-        padding: 1rem;
 
+    &__wrapper {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+
+        @media (max-width: vars.$bp-lg) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #globe {
+            position: relative;
+            z-index: -1;
+            width: 35%;
+            margin-right: -3rem;
+
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: flex-start;
+
+            @media (min-width: vars.$bp-xxl) {
+                width: 30%;
+                transform: scale(0.9);
+                margin-right: -2rem;
+            }
+
+            @media (min-width: vars.$bp-xl) and (max-width: (vars.$bp-xxl - 1)) {
+                transform: scale(0.8);
+            }
+
+            @media (min-width: vars.$bp-md) and (max-width: vars.$bp-xl) {
+                width: 45%;
+                margin-right: 0;
+            }
+
+            @media (max-width: vars.$bp-md) {
+                width: 60%;
+                margin-right: 0;
+            }
+        }
 
         &__title {
             margin: 0 auto;
@@ -22,7 +63,7 @@ $prefix: ".about";
 
             h1 {
                 font-size: 2.5rem;
-                text-align: center;
+                text-align: left;
                 line-height: normal;
                 margin: 0 auto;
 
@@ -36,82 +77,38 @@ $prefix: ".about";
             }
         }
 
-        &__content {
-
+        .desc {
             display: flex;
-            flex-flow: row wrap;
-            justify-content: center;
+            flex-flow: column nowrap;
+            align-items: center;
+            width: 45%;
 
-            @media (max-width: vars.$bp-lg) {
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-            }
-
-            #globe {
-                position: relative;
-                z-index: -1;
-                width: 35%;
-                margin-right: -3rem;
-
-                display: flex;
-                flex-flow: row nowrap;
-                justify-content: center;
-                align-items: flex-start;
-
-                @media (min-width: vars.$bp-xxl) {
-                    width: 30%;
-                    transform: scale(0.9);
-                    margin-right: -2rem;
-                }
-
-                @media (min-width: vars.$bp-xl) and (max-width: (vars.$bp-xxl - 1)) {
-                    transform: scale(0.8);
-                }
-
-                @media (min-width: vars.$bp-md) and (max-width: vars.$bp-xl) {
-                    width: 45%;
-                    margin-right: 0;
-                }
-
-                @media (max-width: vars.$bp-md) {
-                    width: 60%;
-                    margin-right: 0;
-                }
-            }
-
-            .desc {
-                display: flex;
-                align-items: center;
+            @media (min-width: vars.$bp-xxl) {
                 width: 45%;
+            }
 
-                @media (min-width: vars.$bp-xxl) {
-                    width: 45%;
-                }
+            @media (min-width: vars.$bp-xl) and (max-width: vars.$bp-xxl) {
+                width: 50%;
+            }
 
-                @media (min-width: vars.$bp-xl) and (max-width: vars.$bp-xxl) {
-                    width: 50%;
-                }
+            @media (max-width: vars.$bp-xl) {
+                width: 80%;
+            }
 
-                @media (max-width: vars.$bp-xl) {
-                    width: 80%;
-                }
+            @media (max-width: vars.$bp-md) {
+                width: 95%;
+            }
 
-                @media (max-width: vars.$bp-md) {
-                    width: 95%;
-                }
+            p {
+                text-align: justify;
+                word-wrap: break-word;
+                font-size: .9rem;
+                line-height: normal;
+                font-weight: 400;
+                margin-bottom: 1rem;
 
-                p {
-                    text-align: justify;
-                    word-wrap: break-word;
-                    font-size: .9rem;
-                    line-height: normal;
-                    font-weight: 400;
-                    margin-bottom: 1rem;
-
-                    @media (max-width: vars.$bp-xxl) {
-                        font-size: 14px;
-                    }
+                @media (max-width: vars.$bp-xxl) {
+                    font-size: 14px;
                 }
             }
         }
