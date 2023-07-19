@@ -59,8 +59,6 @@ $prefix: ".about";
                 justify-content: center;
                 align-items: flex-start;
 
-                outline: 1px solid beige;
-
                 @media (min-width: vars.$bp-xxl) {
                     width: 30%;
                     transform: scale(0.9);
@@ -86,8 +84,6 @@ $prefix: ".about";
                 display: flex;
                 align-items: center;
                 width: 45%;
-
-                outline: 1px solid beige;
 
                 @media (min-width: vars.$bp-xxl) {
                     width: 45%;
