@@ -93,7 +93,7 @@ export function sponsorsSlide() {
         perPage: 4,
         autoWidth: true,
         height: "124%",
-        gap: "6vw",
+        gap: "8vw",
         breakpoints: {
           768: {
             perPage: 2,
