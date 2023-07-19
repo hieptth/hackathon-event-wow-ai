@@ -144,15 +144,18 @@ $prefix: ".attend";
                 span.wrapper {
                     display: flex;
                     flex-direction: row;
+                    align-items: center;
 
                     div {
                         margin-right: .5rem;
                     }
-                }
 
-                p {
-                    font-size: 12px;
-                    text-align: left;
+                    p {
+                        font-size: 14px;
+                        text-align: left;
+                        text-wrap: balance;
+                        line-height: normal;
+                    }
                 }
             }
 

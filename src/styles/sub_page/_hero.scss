@@ -98,7 +98,7 @@
           background: radial-gradient(245.19% 108.52% at 18.07% 19.48%, #1D1E30 0%, rgba(29, 30, 48, 0.00) 100%);
           border-radius: 25px;
           padding: 6%;
-          padding-bottom: 3%;
+          padding-bottom: 4%;
           position: relative;
 
           &>img {
@@ -123,10 +123,10 @@
 
             .card-title {
               text-align: left;
-              font-size: 14px;
+              font-size: 16px;
 
               @media (max-width: vars.$bp-xs) {
-                font-size: 12px;
+                font-size: 14px;
               }
             }
 
@@ -205,7 +205,7 @@
               p {
                 display: block;
                 text-align: left;
-                font-size: 12px;
+                font-size: 13px;
                 line-height: normal;
                 text-align: justify;
               }
