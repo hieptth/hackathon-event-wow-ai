@@ -83,16 +83,17 @@ export function sponsorsSlide() {
   if (sponsorsCarousel) {
     requestAnimationFrame(function () {
       new Splide(sponsorsCarousel, {
-        autoplay: false,
+        autoplay: true,
         arrows: false,
-        pagination: true,
+        pagination: false,
         drag: true,
         interval: 5000,
         pauseOnHover: true,
-        type: "slide",
-        perPage: 5,
-        width: "100%",
+        type: "loop",
+        perPage: 4,
+        autoWidth: true,
         height: "124%",
+        gap: "6vw",
         breakpoints: {
           768: {
             perPage: 2,
