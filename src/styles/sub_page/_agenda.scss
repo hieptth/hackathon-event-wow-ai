@@ -101,7 +101,7 @@ $prefix: ".agenda";
                         padding: .25rem .75rem;
                     }
 
-                    img {
+                    svg {
                         width: 24px;
                         height: 24px;
 
@@ -114,6 +114,18 @@ $prefix: ".agenda";
                         margin-top: 4px;
                         color: vars.$color-white;
                         font-size: 11px;
+                    }
+
+                    &:hover {
+                        background-color: vars.$color-white;
+
+                        span {
+                            color: vars.$color-blue-pink;
+                        }
+
+                        svg path {
+                            fill: vars.$color-blue-pink;
+                        }
                     }
                 }
             }
