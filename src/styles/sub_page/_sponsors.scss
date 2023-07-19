@@ -78,7 +78,7 @@ $prefix: ".sponsors";
                 @include mixins.transition("width");
 
                 &.is-active {
-                    background: vars.$color-blue-pink;
+                    background: vars.$color-bright-pink;
                     transform: none;
                     width: 40px;
                 }
