@@ -158,6 +158,11 @@ $prefix: ".attend";
                         line-height: normal;
                     }
                 }
+
+                &.end_pad {
+                    visibility: hidden;
+                    background-color: vars.$color-dark;
+                }
             }
 
             .splide__slide:hover {
