@@ -158,7 +158,8 @@
       }
 
 
-      &:hover {
+      &:hover,
+      &-active {
         max-width: 400px;
         height: auto;
 

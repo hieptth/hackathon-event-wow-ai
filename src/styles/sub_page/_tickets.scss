@@ -209,7 +209,8 @@ $prefix: ".tickets";
                     padding: 1vw;
                 }
 
-                tr:nth-child(n+2) :not(td:first-child) {
+                tr:nth-child(3) :not(td:first-child),
+                tr:nth-child(4) :not(td:first-child) {
                     font-weight: 500;
                     color: vars.$color-dark;
                 }
