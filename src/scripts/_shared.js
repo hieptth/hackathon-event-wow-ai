@@ -145,7 +145,8 @@ export function countdownTimer() {
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
     // Display the result in the element with id="timer"
-    timer.innerHTML = days + "D : " + hours + "h : " + minutes + "m";
+    timer.innerHTML =
+      days + "D : " + hours + "h : " + minutes + "m : " + seconds + "s";
 
     // If the count down is finished, write some text
     if (distance < 0) {

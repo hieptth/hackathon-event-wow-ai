@@ -269,7 +269,7 @@ $prefix: ".landing";
                 border: none;
                 background-color: vars.$color-d1;
                 border-radius: 26px;
-                padding: 1vh 1rem;
+                padding: 1.75vh 1rem;
                 margin: 0 1rem .5rem 0;
 
                 font-size: 1.2vw;
@@ -294,8 +294,8 @@ $prefix: ".landing";
 
             width: 100%;
 
-            font-size: 11vw;
-            line-height: 100%;
+            font-size: 6.5vw;
+            line-height: calc(100% + 10px);
             font-family: 'Montserrat', sans-serif;
             font-weight: 900;
         }

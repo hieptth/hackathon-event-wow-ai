@@ -304,7 +304,7 @@
                 <img src="assets/imgs/star-1.svg" />
             </section>
 
-            <section class="discount entrance-animation">
+            <!-- <section class="discount entrance-animation">
                 <div class="discount__wrapper">
                     <div class="discount__wrapper__imgContainer">
                         <img src="assets/imgs/discount_img.png" alt="discount_img">
@@ -321,6 +321,62 @@
                         </div>
                     </div>
                 </div>
+            </section> -->
+
+            <section class="anchor" id="speakers-lineup">
+
+                <section class="sponsors entrance-animation">
+                    <div class="sponsors__title">
+                        <div class="title" id="attend-carousel-heading">
+                            SPEAKERS LINE-UP
+                        </div>
+                        <div class="subTitle">
+                            <hr> updating...
+                        </div>
+                    </div>
+                    <div class="sponsors__content">
+                        <section class="sponsors__content__list splide" id="speakers-lineup__list"
+                            aria-labelledby="sponsors-carousel-heading">
+                            <div class="sponsors__content__list__wrapper splide__track">
+                                <div class="splide__list">
+                                    <div class="splide__slide">
+                                        <img src="assets/imgs/speakers-lineup/Berkeley_Haas.png" alt="Berkeley_Haas">
+                                    </div>
+                                    <div class="splide__slide">
+                                        <img src="assets/imgs/speakers-lineup/GoogleDeepMindLogo.png"
+                                            alt="google-deepmind">
+                                    </div>
+                                    <div class="splide__slide">
+                                        <img src="assets/imgs/speakers-lineup/HAI.png" alt="HAI">
+                                    </div>
+                                    <div class="splide__slide">
+                                        <img src="assets/imgs/speakers-lineup/Meta-Logo.png" alt="Meta">
+                                    </div>
+                                    <div class="splide__slide">
+                                        <img src="assets/imgs/speakers-lineup/NVIDIA.png" alt="NVIDIA">
+                                    </div>
+                                    <div class="splide__slide">
+                                        <img src="assets/imgs/speakers-lineup/Oracle-logo.png" alt="Oracle">
+                                    </div>
+                                    <div class="splide__slide">
+                                        <img src="assets/imgs/speakers-lineup/Oxford_Brookes_University_logo.png"
+                                            alt="Oxford_Brookes_University_logo">
+                                    </div>
+                                    <div class="splide__slide">
+                                        <img src="assets/imgs/speakers-lineup/Qualcomm-Logo.png" alt="Qualcomm">
+                                    </div>
+                                    <div class="splide__slide">
+                                        <img src="assets/imgs/speakers-lineup/SAP_logo.png" alt="SAP">
+                                    </div>
+                                    <div class="splide__slide">
+                                        <img src="assets/imgs/speakers-lineup/Stanford-University-Logo.png"
+                                            alt="Stanford-University-Logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
             </section>
 
             <section class="anchor" id="sponsors">
@@ -546,7 +602,8 @@
                 window.site.shared.countdownTimer();
                 window.site.home.entranceAnimation();
                 window.site.home.attendSlide();
-                window.site.home.sponsorsSlide();
+                window.site.home.sponsorsSlide("speakers-lineup__list");
+                window.site.home.sponsorsSlide("sponsors__list");
 
                 window.site.home.partnersSlide("partners__list");
                 window.site.home.outletsSlide("outlets__list");

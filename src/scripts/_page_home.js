@@ -77,8 +77,8 @@ export function attendSlide() {
   }
 }
 
-export function sponsorsSlide() {
-  const sponsorsCarousel = document.getElementById("sponsors__list");
+export function sponsorsSlide(id) {
+  const sponsorsCarousel = document.getElementById(id);
 
   if (sponsorsCarousel) {
     requestAnimationFrame(function () {
