@@ -2,7 +2,7 @@
 @use "../variables" as vars;
 
 .c-navbar {
-  display: none;
+  display: block;
   position: fixed;
   width: 100%;
   z-index: 9999;
@@ -54,6 +54,7 @@
   }
 
   &__links {
+
     a {
       font-size: vars.$fs-p-s;
       @include mixins.transition("font-size, font-weight");
@@ -69,7 +70,7 @@
     }
 
     @media (min-width: (vars.$bp-xl + 1)) {
-      background: rgba(255, 255, 255, 0.02);
+      background-color: #010314;
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 999px;
       padding: 11px 35px 13px 25px;

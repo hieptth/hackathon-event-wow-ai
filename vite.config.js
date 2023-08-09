@@ -18,7 +18,8 @@ export default defineConfig({
     outDir: "./../dist",
     rollupOptions: {
       input: {
-        main: new URL("./src/index.html", import.meta.url).pathname,
+        // main: new URL("./src/index.html", import.meta.url).pathname,
+        entry: "./src/index.html",
       },
       output: {
         assetFileNames: "assets/[name].[ext]",

@@ -40,26 +40,12 @@ export default function initComponentNavbar(
   }
 
   const navEl = document.querySelector(".c-navbar");
-  const section1 = document.getElementById("landingPage");
-  const section1Height = section1.offsetHeight;
 
   window.addEventListener("scroll", () => {
-    if (window.scrollY > section1Height) {
-      navEl.style.display = "block";
-    } else {
-      navEl.style.display = "none";
-    }
-
-    if (window.scrollY >= section1Height + 100) {
+    if (window.scrollY >= 300) {
       navEl.classList.add("navbar-scrolled");
-    } else if (window.scrollY <= section1Height + 100) {
+    } else if (window.scrollY <= 300) {
       navEl.classList.remove("navbar-scrolled");
     }
   });
 }
-
-// const scrollDown = window.document.getElementById("scroll-down");
-
-// scrollDown.addEventListener("click", () => {
-//   scrollDown.scrollTop += window.innerHeight;
-// });
