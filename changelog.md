@@ -14,7 +14,7 @@
 - change **Get start** to **Secure a slot NOW** in navbar
 - remove mute/un-mute button
 
-## version 1.0.2
+# version 1.0.2
 
 ## Navbar (index.html & _c_navbar.js & navbar.scss)
 - moved above the landingPage section
@@ -27,3 +27,7 @@
 - remove custom navbar & use global navbar instead
 - font-weight of `timer` changed from 900 to 800
 - add animation in **landing.scss** to spin the bubble
+
+## Agenda (agenda_tag.hbs & agenda.scss)
+- add another layout for multi speakers
+    - wrap speakers inside `desc_images` then `desc__image` like the example given

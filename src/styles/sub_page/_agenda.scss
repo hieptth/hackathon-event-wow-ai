@@ -5,12 +5,22 @@ $prefix: ".agenda";
 #{$prefix} {
     max-width: vars.$bp-xxl;
     margin: 0 auto;
-    padding-bottom: 1rem;
+    padding: 0 1rem 1rem;
     transition: all 1s ease;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (min-width: vars.$bp-sm) {
+        padding: 0 2rem 1rem;
+    }
+
+    &__toggle {
+        &__display {
+            width: 100%;
+        }
+    }
 
     &__head {
 
@@ -32,9 +42,13 @@ $prefix: ".agenda";
         max-width: vars.$bp-xxl;
         margin-top: 2rem;
 
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-evenly;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 1rem;
+
+        @media (max-width: vars.$bp-xl) {
+            grid-template-columns: 100%;
+        }
 
 
         &__item {
@@ -46,13 +60,17 @@ $prefix: ".agenda";
             background-color: vars.$color-light-dark;
             border-radius: 15px;
             padding: 16px 16px;
-            margin: 1.5rem 0;
+            min-height: 190px;
+            max-width: 100%;
 
-            max-width: 680px;
+            @media (max-width: vars.$bp-xl) {
+                max-width: 100%;
+                width: 100%;
+            }
 
-            @media (max-width: vars.$bp-sm) {
-                flex-flow: column wrap;
-                justify-content: center;
+            @media (max-width: vars.$bp-md) {
+                display: grid;
+                grid-template-columns: 100%;
             }
 
             @media (max-width: 825px) {
@@ -69,7 +87,7 @@ $prefix: ".agenda";
                 flex-direction: column;
                 align-items: center;
 
-                @media (max-width: vars.$bp-sm) {
+                @media (max-width: vars.$bp-md) {
                     flex-flow: row wrap;
                     width: 100%;
                     justify-content: space-evenly;
@@ -86,6 +104,7 @@ $prefix: ".agenda";
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    cursor: pointer;
 
                     background: vars.$color-light-gray;
                     border: none;
@@ -95,7 +114,7 @@ $prefix: ".agenda";
                     width: 60px;
                     height: 60px;
 
-                    @media (max-width: vars.$bp-sm) {
+                    @media (max-width: vars.$bp-md) {
                         height: auto;
                         width: fit-content;
                         padding: .25rem .75rem;
@@ -105,7 +124,7 @@ $prefix: ".agenda";
                         width: 24px;
                         height: 24px;
 
-                        @media (max-width: vars.$bp-sm) {
+                        @media (max-width: vars.$bp-md) {
                             display: none;
                         }
                     }
@@ -133,86 +152,133 @@ $prefix: ".agenda";
             &>img {
                 margin: 0 1rem;
                 width: 8px;
-                height: 120px;
+                height: 100%;
 
-                @media (max-width: vars.$bp-sm) {
+                @media (max-width: vars.$bp-md) {
                     display: none;
                 }
             }
 
             .wrapper {
-                display: flex;
-                flex-direction: column;
-
+                flex-grow: 1;
                 width: 30vw;
+                max-width: 100%;
+                height: 100%;
 
-                @media (max-width:825px) {
-                    width: 90vw;
+                @media (max-width: vars.$bp-xl) {
+                    width: 100%;
                 }
 
-                @media (max-width: vars.$bp-sm) {
-                    width: 100%;
+                @media (max-width: vars.$bp-md) {
                     padding: .5rem;
+                    text-align: center;
                 }
 
                 .head {
                     display: flex;
-                    flex-direction: row;
+                    flex-flow: row nowrap;
                     justify-content: space-between;
 
                     .character {
                         display: flex;
-                        flex-direction: row;
+                        flex-shrink: 0;
+                        flex-flow: row wrap;
                         align-items: center;
+                        max-width: 80%;
+                        min-width: 0;
+                        word-wrap: break-word;
+                        line-height: normal;
+
+                        @media (max-width: vars.$bp-md) {
+                            max-width: 100%;
+                        }
 
                         img {
                             width: 55px;
                             height: 55px;
                         }
 
+                        &__wrapper {
+                            margin-left: 1em;
+                        }
+
                         &__name {
                             font-size: 17px;
+                            line-height: 24px;
                         }
 
                         &__role {
                             font-size: 12px;
-                        }
-
-                        .custom-brand {
-                            font-size: 12px;
-                            background: -webkit-linear-gradient(225deg,
-                                    vars.$color-bright-pink 10%,
-                                    vars.$color-light-purple 100%);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
+                            font-weight: 400;
                         }
                     }
 
                     .btn {
-                        background: none;
+                        display: flex;
+                        width: fit-content;
+                        height: fit-content;
+                        padding: 10px;
+                        justify-content: center;
+                        align-items: center;
+                        font-weight: 700;
+                        font-size: 14px;
+
+                        border-radius: 8px;
                         color: vars.$color-gray;
                         border: 1px solid vars.$color-gray;
-                        border-radius: 10px;
-                        font-size: 14px;
-                        font-weight: 700;
+                        cursor: pointer;
 
-                        height: 30px;
-                        width: 81px;
-
-                        @media (max-width: vars.$bp-sm) {
-                            font-size: 12px;
+                        @media (max-width: vars.$bp-md) {
+                            display: none;
                         }
                     }
                 }
 
                 .desc {
+                    width: 100%;
                     margin-top: 1rem;
                     font-size: 1.2rem;
                     line-height: 1.5rem;
+                    font-weight: 300;
 
                     @media (max-width: (vars.$bp-sm + 30)) {
                         font-size: 16px;
                         text-align: center;
+                    }
+
+                    &__images {
+                        display: flex;
+                        flex-flow: row wrap;
+                        justify-content: space-evenly;
+                        align-items: center;
+                        padding: 1em 1em 0;
+
+                        // @media (max-width: vars.$bp-md) {
+                        //     padding: 1em 0 0;
+                        // }
+
+                        // @media (max-width: vars.$bp-sm) {
+                        //     grid-template-columns: 100%;
+                        // }
+                    }
+
+                    &__image {
+                        text-align: center;
+                        margin: 0 0 1em;
+
+                        img {
+                            border-radius: 100%;
+                            height: 55px;
+                            max-width: 100%;
+                            width: 55px;
+                        }
+
+                        span {
+                            display: block;
+                            font-size: 14px;
+                            margin-top: .5em;
+                            white-space: nowrap;
+                        }
                     }
                 }
             }
@@ -231,5 +297,14 @@ $prefix: ".agenda";
         img {
             margin-left: .6rem;
         }
+    }
+
+    .custom-brand {
+        font-size: 12px;
+        background: -webkit-linear-gradient(225deg,
+                vars.$color-bright-pink 10%,
+                vars.$color-light-purple 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
