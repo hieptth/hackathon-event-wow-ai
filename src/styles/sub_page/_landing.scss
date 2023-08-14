@@ -6,6 +6,7 @@ $prefix: ".landing";
 
 #{$prefix} {
     width: 100vw;
+    min-height: 100vh;
     height: 100vh;
     overflow: hidden;
 
@@ -18,7 +19,8 @@ $prefix: ".landing";
         z-index: 1;
         inset: 0;
         width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
+        height: 100vh !important;
         object-fit: cover;
     }
 

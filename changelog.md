@@ -34,3 +34,25 @@
 
 ## index.html
 - change the script for default openTab to speaker.
+
+
+# version 1.0.3
+
+## navbar
+- remove FAQ
+
+## html
+- change scrollbar in **global.scss**
+- remove padding of body
+- add tik tok link to footer icon (omissible)
+
+## landing.scss
+- hot fix video overflow content (on review)
+
+## temp_judge.hbs & judges.scss
+- fix responsive problem
+
+## agenda_tag.hbs & agenda.scss
+- make `Remarks` button have `whitespace: nowrap;`
+- change **divider bar** between schedule & wrapper from image to html element
+- change styling here & there (font-size, font-weight, padding, etc.)
