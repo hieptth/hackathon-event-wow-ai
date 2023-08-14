@@ -11,20 +11,39 @@ $prefix: ".judges";
     margin: 1rem auto;
 
     &__list {
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
-        flex-wrap: wrap;
-        flex: 1;
-        white-space: nowrap;
+        // display: flex;
+        // flex-flow: row wrap;
+        // align-items: flex-start;
+        // justify-content: space-evenly;
+        // gap: 1rem;
+        text-align: center;
+        // white-space: nowrap;
+
+        display: grid;
+        grid-gap: 1rem;
+        padding: 0 1rem;
+
+        @media (min-width: (vars.$bp-lg + 1px)) {
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        @media (max-width: vars.$bp-lg) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @media (max-width: vars.$bp-md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: vars.$bp-sm) {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
 
         &__item {
-            padding: 2rem 5rem;
             display: flex;
-            flex-direction: column;
+            flex-flow: column nowrap;
             align-items: center;
-            max-width: 20vw;
+            width: 100%;
 
             .background {
                 height: 175px;
@@ -60,10 +79,15 @@ $prefix: ".judges";
                 .title {
                     margin: .5rem 0;
                     font-size: 1.3rem;
+                    white-space: normal;
+                    line-height: normal;
+                    text-wrap: balance;
                 }
 
                 .subTitle {
                     font-size: .9rem;
+                    line-height: normal;
+                    text-wrap: balance;
                 }
 
                 @media (max-width: vars.$bp-lg) {
@@ -93,7 +117,7 @@ $prefix: ".judges";
 
                     .title {
                         margin: 1rem 0;
-                        font-size: 2rem;
+                        font-size: 1.5rem;
                     }
 
                     .subTitle {

@@ -26,10 +26,6 @@
   overflow-x: hidden;
   overflow-y: scroll;
 
-  @media (max-width: 428px) {
-    padding: 20px 8px;
-  }
-
   #space-net {
     object-fit: cover;
     position: absolute;

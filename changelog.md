@@ -31,3 +31,6 @@
 ## Agenda (agenda_tag.hbs & agenda.scss)
 - add another layout for multi speakers
     - wrap speakers inside `desc_images` then `desc__image` like the example given
+
+## index.html
+- change the script for default openTab to speaker.
