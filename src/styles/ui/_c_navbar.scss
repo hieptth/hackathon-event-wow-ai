@@ -247,9 +247,9 @@
 }
 
 .navbar-scrolled {
-  background-color: vars.$color-dark-blue;
+  background-color: vars.$color-dark;
 
   @media (min-width: vars.$bp-lg) {
-    background-color: vars.$color-dark-blue;
+    background-color: vars.$color-dark;
   }
 }

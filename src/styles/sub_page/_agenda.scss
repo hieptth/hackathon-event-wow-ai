@@ -241,8 +241,8 @@ $prefix: ".agenda";
 
             .wrapper {
                 flex-grow: 1;
-                width: 30vw;
                 max-width: 100%;
+                width: 100%;
                 height: 100%;
                 padding-left: 1rem;
                 padding-top: .5rem;
@@ -260,6 +260,7 @@ $prefix: ".agenda";
                     display: flex;
                     flex-flow: row nowrap;
                     justify-content: space-between;
+                    gap: 1rem;
 
                     @media (max-width: vars.$bp-md) {
                         padding: 0 .75rem;
@@ -267,11 +268,10 @@ $prefix: ".agenda";
 
                     .character {
                         display: flex;
-                        flex-shrink: 0;
-                        flex-flow: row wrap;
+                        flex-shrink: 1;
+                        flex-flow: row nowrap;
                         align-items: center;
-                        max-width: 70%;
-                        min-width: 0;
+                        width: 100%;
                         word-wrap: break-word;
                         line-height: normal;
 

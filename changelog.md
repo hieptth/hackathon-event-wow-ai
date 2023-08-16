@@ -56,3 +56,22 @@
 - make `Remarks` button have `whitespace: nowrap;`
 - change **divider bar** between schedule & wrapper from image to html element
 - change styling here & there (font-size, font-weight, padding, etc.)
+
+# version 1.0.4
+
+## Requirements:
+---
+- [x] Change navbar background color to match body color
+- [x] Add pagination to Sponsor's & Speakers-Lineup's carousel
+- [x] Fix styling for `footer__text` to wrap normally
+- [x] Fix class `character` wrapped mid container
+- [x] Remove the star separating sections of old `Tickets`
+
+## Changes:
+- `entry.js`
+- `style.css`
+- `index.html`
+  - Update links in `footer__text` (**must** wrap the links and text inside a `span`)
+  - Removed first `footer__text` containing real world location
+  - Removed `FAQ` in `c-navbar__links`
+  - Remove `<section__stars entrance-animation entrance-animation--show` after `attend` section

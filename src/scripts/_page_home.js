@@ -85,7 +85,7 @@ export function sponsorsSlide(id) {
       new Splide(sponsorsCarousel, {
         autoplay: true,
         arrows: false,
-        pagination: false,
+        pagination: true,
         drag: true,
         interval: 5000,
         pauseOnHover: true,
