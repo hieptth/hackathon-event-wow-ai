@@ -1,0 +1,192 @@
+@use "variables" as vars;
+
+.login_page {
+    width: 100%;
+    background-image: url('/assets/imgs/login-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+
+    .header {
+        width: 100%;
+        padding: 1.5em 0;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        &>img {
+            height: 50px;
+            width: auto;
+            margin-left: 1.5em;
+        }
+
+        .close_btn {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            border-top-left-radius: 32px;
+            border-bottom-left-radius: 32px;
+            padding: 10px 20px;
+            border: 1px solid white;
+            border-right: none;
+            gap: 10px;
+            cursor: pointer;
+
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+
+            @media (max-width: vars.$bp-sm) {
+                span {
+                    display: none;
+                }
+            }
+
+            img {
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+
+    .form {
+        margin: 0 auto;
+        width: 50%;
+        position: relative;
+        z-index: 2;
+
+        // dev
+        height: 80vh;
+
+        .inner-bg {
+            border-radius: 26px;
+            border: 1px solid #2A2B3A;
+            background: radial-gradient(78.87% 81.00% at 50.00% 50.00%, rgba(0, 0, 0, 0.03) 44.79%, #74F 80.78%, #FFF 91.91%);
+            backdrop-filter: blur(13.5px);
+            height: 100%;
+            width: 70%;
+            left: 15%;
+
+            position: absolute;
+            z-index: 1;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
+
+            .wrapper {
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                gap: 2em;
+                align-items: center;
+                padding: 1em 2em;
+
+                h1 {
+                    font-size: 2.5em;
+                    font-weight: 400;
+                    line-height: normal;
+                    margin: 0;
+                }
+
+                a {
+                    cursor: pointer;
+                    border-radius: 75px;
+                    border: .5px solid white;
+                    padding: 10px 2em;
+                    flex-grow: 1;
+                    text-align: center;
+                    text-transform: uppercase;
+                    background: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.00) 100%);
+                }
+            }
+
+            .submit-btn {
+                padding: 1em;
+                margin: 0 auto;
+
+                button {
+                    padding: 12px 24px;
+                    min-width: 165px;
+                    font-size: 1.2em;
+                    display: flex;
+                    flex-flow: row nowrap;
+                    gap: .5em;
+
+                    img {
+                        width: 16px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+
+        &__wrapper {
+            position: relative;
+            z-index: 2;
+
+            &__header {
+                margin-bottom: .5em;
+                visibility: hidden;
+            }
+
+            &__body {
+                padding: 0 1.5em;
+
+                form {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: center;
+                    gap: 2em;
+                    width: 100%;
+
+                    .left {
+                        flex: 1;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        gap: 2em;
+                    }
+
+                    .right {
+                        flex: 1;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        gap: 2em;
+                    }
+                }
+
+                &__input {
+                    width: 100%;
+
+                    input,
+                    select {
+                        padding: 12px 24px;
+                        border-radius: 64px;
+                        width: 100%;
+                        font-size: 1em;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                        gap: 1.5em;
+                    }
+
+                    option {
+                        background-color: #1D1E30;
+                        color: white;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: normal;
+                        padding: 12px 24px;
+
+                        &:hover {
+                            background-color: #1D1E30;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
