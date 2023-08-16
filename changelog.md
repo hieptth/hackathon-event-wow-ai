@@ -75,3 +75,23 @@
   - Removed first `footer__text` containing real world location
   - Removed `FAQ` in `c-navbar__links`
   - Remove `<section__stars entrance-animation entrance-animation--show` after `attend` section
+
+# version 1.0.5
+
+## Requirements:
+---
+- [x] Provide add to calendar events for `schedule__btn` in agenda section and `add2cal` in landing section
+
+## Changes:
+- `entry.js`
+- `index.html`:
+  - add `<link rel="stylesheet" href="scripts/atcb/atcb.min.css">` to `head` element
+  - add calendar data to `.schedule__btn` in `agenda` section & `#add2cal` in landing section `.landing__content__title`
+    - follow the following format:
+      - `data-name="How to build Responsible Applied AI Solutions at Scale"`
+      - `data-description="..."`
+      - `data-start-date="2022-09-29"`
+      - `data-start-time="09:00"`
+      - `data-end-date="2022-09-29"`
+      - `data-end-time="10:00"`
+      - `data-filename="ai-webinar-2022-1"`
