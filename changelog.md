@@ -95,3 +95,13 @@
       - `data-end-date="2022-09-29"`
       - `data-end-time="10:00"`
       - `data-filename="ai-webinar-2022-1"`
+
+
+# ver 1.1.5
+
+## Requirements:
+- [x] Add login & login successful page
+
+## Changes:
+- `style.css`
+- Create `login.html` & `login_success.html`

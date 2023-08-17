@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Login</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="styles/style.scss" rel="stylesheet" />
     </head>
     <body class="login_page">
@@ -69,23 +68,18 @@
         </section>
 
 
-
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-            crossorigin="anonymous"></script>
         <script>
             function AutoAdjust() {
                 const wrapperHeight = document.querySelector('.wrapper').offsetHeight;
                 const header = document.querySelector('.form__wrapper__header').style.height = wrapperHeight + 'px';
 
                 const formHeight = document.querySelector('.form__wrapper').offsetHeight;
-                const form = document.querySelector('.form').style.height = formHeight + 'px' + '20vh';
-
+                const form = document.querySelector('.form').style.height = formHeight + 200 + 'px';
             }
             AutoAdjust();
             window.addEventListener('resize', AutoAdjust);
             document.getElementsByClassName('submit-btn')[0].addEventListener('click', function () {
-                window.location.replace("login_success.html");
+                window.location.replace("register_success.html");
             });
         </script>
     </body>

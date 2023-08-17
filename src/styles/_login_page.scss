@@ -63,8 +63,9 @@
         position: relative;
         z-index: 2;
 
-        // dev
-        height: 80vh;
+        @media (max-width: vars.$bp-md) {
+            width: 100%;
+        }
 
         .inner-bg {
             border-radius: 26px;
@@ -72,8 +73,8 @@
             background: radial-gradient(78.87% 81.00% at 50.00% 50.00%, rgba(0, 0, 0, 0.03) 44.79%, #74F 80.78%, #FFF 91.91%);
             backdrop-filter: blur(13.5px);
             height: 100%;
-            width: 70%;
-            left: 15%;
+            width: 75%;
+            left: 12.5%;
 
             position: absolute;
             z-index: 1;
@@ -81,30 +82,43 @@
             flex-flow: column nowrap;
             justify-content: space-between;
 
+            @media (max-width: 1100px) {
+                width: 100%;
+                left: 0;
+            }
+
+            @media (max-width: vars.$bp-md) {
+                background: none;
+                border: none;
+                backdrop-filter: none;
+                width: 100%;
+                left: 0;
+            }
+
             .wrapper {
                 display: flex;
-                flex-flow: row nowrap;
-                justify-content: flex-start;
-                gap: 2em;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                gap: .5em;
                 align-items: center;
-                padding: 1em 2em;
+                padding: 2em 2em 1em;
+
+                @media (max-width: 1120px) {}
 
                 h1 {
-                    font-size: 2.5em;
-                    font-weight: 400;
-                    line-height: normal;
                     margin: 0;
+                    line-height: normal;
+                    font-size: 40px;
+                    font-weight: 400;
                 }
 
                 a {
-                    cursor: pointer;
+                    padding: .5em 2em;
                     border-radius: 75px;
                     border: .5px solid white;
-                    padding: 10px 2em;
-                    flex-grow: 1;
                     text-align: center;
                     text-transform: uppercase;
-                    background: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.00) 100%);
+                    background-color: #1d1e306e;
                 }
             }
 
@@ -147,6 +161,10 @@
                     gap: 2em;
                     width: 100%;
 
+                    @media (max-width: 1100px) {
+                        flex-flow: column nowrap;
+                    }
+
                     .left {
                         flex: 1;
                         display: flex;
@@ -175,6 +193,12 @@
                         font-weight: 500;
                         line-height: normal;
                         gap: 1.5em;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+
+                    select:focus {
+                        outline: none;
                     }
 
                     // Old
@@ -186,6 +210,8 @@
                         font-weight: 700;
                         line-height: normal;
                         padding: 12px 24px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
 
                         &:hover {
                             background-color: #1D1E30;
@@ -216,6 +242,11 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+            padding: 0 .5em;
+
+            @media (max-width: vars.$bp-sm) {
+                font-size: 32px;
+            }
         }
 
         a:last-child {
@@ -227,4 +258,12 @@
             gap: .5em;
         }
     }
+}
+
+.custom-brand {
+    background: -webkit-linear-gradient(225deg,
+            vars.$color-bright-pink 10%,
+            vars.$color-light-purple 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

@@ -19,7 +19,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         // main: new URL("./src/index.html", import.meta.url).pathname,
-        entry: "./src/index.html",
+        index: "./src/index.html",
+        login: "./src/login.html",
+        login_success: "./src/login_success.html",
       },
       output: {
         assetFileNames: "assets/[name].[ext]",
