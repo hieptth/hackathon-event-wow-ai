@@ -1,5 +1,11 @@
 @use "variables" as vars;
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 .login_page {
     width: 100%;
     background-image: url('/assets/imgs/login-bg.png');
@@ -15,7 +21,7 @@
         justify-content: space-between;
         align-items: center;
 
-        &>img {
+        &>a>img {
             height: 50px;
             width: auto;
             margin-left: 1.5em;
@@ -171,6 +177,7 @@
                         gap: 1.5em;
                     }
 
+                    // Old
                     option {
                         background-color: #1D1E30;
                         color: white;
@@ -187,6 +194,37 @@
                     }
                 }
             }
+        }
+    }
+
+    .login-success {
+        height: 100vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+
+        &>a>img {
+            height: 50px;
+            width: auto;
+        }
+
+        .content {
+            text-align: center;
+            font-size: 62px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        a:last-child {
+            padding: 12px 24px;
+            min-width: 165px;
+            font-size: 1.2em;
+            display: flex;
+            flex-flow: row nowrap;
+            gap: .5em;
         }
     }
 }
